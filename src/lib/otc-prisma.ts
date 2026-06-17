@@ -1,10 +1,10 @@
 import path from "node:path";
 import { readFileSync } from "node:fs";
 import { config as loadDotenv, parse as parseDotenv } from "dotenv";
-import "./db.js";
-import NewsletterSubscriber from "../models/NewsletterSubscriber.js";
-import Admin from "../models/Admin.js";
-import Notification from "../models/Notification.js";
+import "./db";
+import NewsletterSubscriber from "../models/NewsletterSubscriber";
+import Admin from "../models/Admin";
+import Notification from "../models/Notification";
 
 const envCandidates = [
   path.resolve(process.cwd(), ".env"),
