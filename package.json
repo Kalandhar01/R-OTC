@@ -3,19 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prisma:generate": "node scripts/generate-prisma-client.mjs",
-    "predev": "npm run prisma:generate",
     "dev": "next dev --turbopack",
-    "prebuild": "npm run prisma:generate",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "pretypecheck": "npm run prisma:generate",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^6.19.3",
-    "@prisma/client": "^6.19.3",
     "@react-email/render": "^2.0.8",
     "@react-three/fiber": "^9.6.1",
     "@react-three/postprocessing": "^3.0.4",
@@ -42,7 +36,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.18",
-    "prisma": "^6.19.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
