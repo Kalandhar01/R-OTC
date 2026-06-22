@@ -890,7 +890,7 @@ function TrustComplianceSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
-            Why Trade With <span className="text-[#C4A87C]">Ractysh OTC</span> Exchange
+            Why Trade With <span className="text-red-600">Ractysh OTC</span> Exchange
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/58">
             Every transaction on our desk is backed by compliance frameworks,
