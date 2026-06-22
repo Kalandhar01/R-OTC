@@ -7,9 +7,8 @@ export const dynamic = "force-dynamic";
 type ContactPayload = {
   name?: string;
   email?: string;
-  company?: string;
-  mandate?: string;
-  message?: string;
+  phone?: string;
+  services?: string[];
   sourcePage?: string;
 };
 
@@ -52,27 +51,26 @@ export async function POST(request: NextRequest) {
 
   const name = clean(payload.name, 160);
   const email = clean(payload.email, 180).toLowerCase();
-  const company = clean(payload.company, 180);
-  const mandate = clean(payload.mandate, 180);
-  const message = clean(payload.message, 2200);
+  const phone = clean(payload.phone, 40);
+  const services = Array.isArray(payload.services) ? payload.services.filter(s => typeof s === "string").map(s => clean(s, 120)).filter(Boolean) : [];
   const referer = clean(request.headers.get("referer"), 600);
   const sourcePage = clean(payload.sourcePage, 600) || referer || "/";
 
-  if (!name || !emailOk(email) || !message) {
+  if (!name || !emailOk(email)) {
     return NextResponse.json(
       {
         ok: false,
-        message: "Please share your name, a valid email, and mandate details.",
+        message: "Please share your name and a valid email.",
       },
       { status: 400 },
     );
   }
 
   const projectDescription = [
-    message,
-    "",
-    `Company: ${company || "Not provided"}`,
-    `Mandate size: ${mandate || "Not provided"}`,
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Phone: ${phone || "Not provided"}`,
+    `Services: ${services.length ? services.join(", ") : "Not specified"}`,
     `Service: ${service}`,
     `Source page: ${sourcePage}`,
   ].join("\n");
@@ -82,8 +80,8 @@ export async function POST(request: NextRequest) {
     submittedFrom: "ractysh-otc-exchange",
     inquiryType: "OTC Contact Form",
     service,
-    company: company || null,
-    mandate: mandate || null,
+    phone: phone || null,
+    services: services.length ? services : null,
     userAgent: clean(request.headers.get("user-agent"), 600) || null,
     ipAddress: ipAddress(request) || null,
   };
@@ -103,9 +101,8 @@ export async function POST(request: NextRequest) {
         leadId: records.leadId,
         name,
         email,
-        company: company || null,
-        mandate: mandate || null,
-        message,
+        phone: phone || null,
+        services: services.length ? services : null,
         sourcePage,
         createdAt: records.createdAt,
       }).catch((error) => {

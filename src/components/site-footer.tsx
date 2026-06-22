@@ -32,12 +32,13 @@ const footerColumns = [
     ],
   },
   {
-    title: "Control",
+    title: "Compliance & Trust",
     links: [
-      { label: "Counterparty checks", href: "#contact" },
-      { label: "Quote discipline", href: "#features" },
-      { label: "Route approval", href: "#routes" },
-      { label: "Settlement proof", href: "#features" },
+      { label: "AML Framework", href: "#aml-compliance" },
+      { label: "FIU Compliance Focus", href: "#fiu-registration" },
+      { label: "GST Compliant Operations", href: "#gst-compliance" },
+      { label: "Privacy Policy", href: "#contact" },
+      { label: "Terms & Conditions", href: "#contact" },
     ],
   },
   {
@@ -133,7 +134,7 @@ export default function SiteFooter() {
 
   return (
     <footer className="relative z-20 overflow-hidden bg-[#020403] px-5 pt-20 pb-8 text-white sm:px-8 lg:px-10 lg:pt-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(22,184,147,0.08),transparent_40%),radial-gradient(circle_at_84%_20%,rgba(243,201,135,0.06),transparent_40%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(185,28,28,0.08),transparent_40%),radial-gradient(circle_at_84%_20%,rgba(243,201,135,0.06),transparent_40%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#040706] to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-[92rem]">
@@ -152,11 +153,11 @@ export default function SiteFooter() {
                 className="size-12 shrink-0 object-contain"
               />
               <span>
-                <span className="block text-xl font-semibold">
-                  Ractysh OTC Exchange
+                <span className="block text-xl font-bold">
+                  RACTYSH OTC
                 </span>
-                <span className="mt-1 block text-sm text-white/48">
-                  Private mandate coordination
+                <span className="mt-1 block text-sm font-medium tracking-wider text-[#C4A87C]">
+                  Private Limited
                 </span>
               </span>
             </Link>
@@ -203,13 +204,13 @@ export default function SiteFooter() {
                       }}
                       aria-describedby="footer-subscribe-status"
                       placeholder="Enter email"
-                      className="min-h-12 w-full rounded-full border border-white/12 bg-white/[0.045] pr-4 pl-11 text-sm font-medium text-white outline-none backdrop-blur-md transition placeholder:text-white/34 focus:border-emerald-200/30 focus:bg-white/[0.07] focus:ring-2 focus:ring-emerald-300/10"
+                      className="min-h-12 w-full rounded-full border border-white/12 bg-white/[0.045] pr-4 pl-11 text-sm font-medium text-white outline-none backdrop-blur-md transition placeholder:text-white/34 focus:border-red-200/30 focus:bg-white/[0.07] focus:ring-2 focus:ring-red-300/10"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex min-h-12 min-w-[9rem] items-center justify-center gap-2 rounded-full bg-[#16b893] px-6 text-sm font-bold text-[#04100c] shadow-[0_18px_60px_rgba(22,184,147,0.24)] transition hover:bg-[#54d7bb] disabled:cursor-not-allowed disabled:bg-white/14 disabled:text-white/42 disabled:shadow-none"
+                    className="inline-flex min-h-12 min-w-[9rem] items-center justify-center gap-2 rounded-full bg-[#B91C1C] px-6 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.24)] transition hover:bg-[#EF4444] disabled:cursor-not-allowed disabled:bg-white/14 disabled:text-white/42 disabled:shadow-none"
                   >
                     {isSubmitting ? "Sending..." : "Subscribe"}
                     <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -226,10 +227,10 @@ export default function SiteFooter() {
                   >
                     <div
                       role="status"
-                      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-emerald-100/25 bg-white/[0.085] px-5 text-sm font-semibold text-emerald-50 shadow-[0_22px_70px_rgba(22,184,147,0.2)] backdrop-blur-2xl"
+                      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-red-100/25 bg-white/[0.085] px-5 text-sm font-semibold text-red-50 shadow-[0_22px_70px_rgba(185,28,28,0.2)] backdrop-blur-2xl"
                     >
                       <CheckCircle2
-                        className="size-4 text-emerald-200"
+                        className="size-4 text-red-200"
                         aria-hidden="true"
                       />
                       <span>{subscribeMessage || "Subscribed"}</span>
@@ -239,7 +240,7 @@ export default function SiteFooter() {
               </div>
               <a
                 href="#contact"
-                className="inline-flex min-h-12 items-center rounded-full border border-white/12 bg-white/[0.045] px-6 text-sm font-semibold text-white/70 backdrop-blur-md transition hover:border-emerald-200/25 hover:text-white"
+                className="inline-flex min-h-12 items-center rounded-full border border-white/12 bg-white/[0.045] px-6 text-sm font-semibold text-white/70 backdrop-blur-md transition hover:border-red-200/25 hover:text-white"
               >
                 Start mandate
               </a>
@@ -252,7 +253,7 @@ export default function SiteFooter() {
                   ? "sr-only"
                   : subscribeStatus === "error"
                     ? "min-h-5 text-rose-200"
-                    : "min-h-5 text-emerald-100/80"
+                    : "min-h-5 text-red-100/80"
               }`}
             >
               {isSubscribed ? "" : subscribeMessage}
@@ -262,7 +263,7 @@ export default function SiteFooter() {
 
         <div className="grid gap-10 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-200">
               Global private desk
             </p>
             <p className="mt-4 max-w-md text-sm leading-7 text-white/50">
@@ -272,7 +273,7 @@ export default function SiteFooter() {
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/52">
               <span className="inline-flex min-h-10 items-center gap-2 border border-white/10 bg-black/20 px-3">
-                <Globe2 className="size-4 text-emerald-200" aria-hidden="true" />
+                <Globe2 className="size-4 text-red-200" aria-hidden="true" />
                 Global routes
               </span>
               <span className="inline-flex min-h-10 items-center gap-2 border border-white/10 bg-black/20 px-3">
@@ -300,7 +301,7 @@ export default function SiteFooter() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm leading-6 text-white/48 transition hover:text-emerald-100"
+                        className="text-sm leading-6 text-white/48 transition hover:text-red-100"
                       >
                         {link.label}
                       </a>
@@ -313,7 +314,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-4 pt-6 text-sm text-white/42 sm:flex-row sm:items-center sm:justify-between">
-          <p>(c) 2026 Ractysh OTC Exchange. All rights reserved.</p>
+          <p>&copy; 2026 Ractysh Private Limited. All rights reserved.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a href="#contact" className="transition hover:text-white">
               Contact

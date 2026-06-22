@@ -14,7 +14,6 @@ import {
   Text
 } from "./emailPrimitives";
 import { render } from "@react-email/render";
-import * as React from "react";
 import type { CSSProperties } from "react";
 
 export interface WelcomeNewsletterEmailProps {

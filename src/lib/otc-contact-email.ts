@@ -9,9 +9,8 @@ export type OtcContactEmailInput = {
   leadId: string;
   name: string;
   email: string;
-  company: string | null;
-  mandate: string | null;
-  message: string;
+  phone: string | null;
+  services: string[] | null;
   sourcePage: string | null;
   createdAt: Date;
 };
@@ -79,6 +78,8 @@ function dataRow(label: string, value: string | null | undefined) {
 }
 
 function buildText(input: OtcContactEmailInput) {
+  const servicesList = input.services?.length ? input.services.join(", ") : "Not specified";
+
   return `New Ractysh OTC Contact Form Submission
 
 Submitted: ${formatSubmittedAt(input.createdAt)}
@@ -87,12 +88,9 @@ Lead ID: ${input.leadId}
 
 Name: ${present(input.name)}
 Email: ${present(input.email)}
-Company: ${present(input.company)}
-Mandate Size: ${present(input.mandate)}
+Phone: ${present(input.phone)}
+Services: ${servicesList}
 Source Page: ${present(input.sourcePage)}
-
-Message:
-${present(input.message)}
 
 Admin: ${getAdminUrl()}`;
 }
@@ -109,8 +107,8 @@ function buildHtml(input: OtcContactEmailInput) {
             <td align="center" style="padding:32px 18px;">
               <table role="presentation" width="680" cellpadding="0" cellspacing="0" style="width:680px;max-width:100%;border-collapse:separate;border-spacing:0;background:#f3f1ea;border:1px solid #d8d2c5;border-radius:24px;overflow:hidden;">
                 <tr>
-                  <td style="padding:32px;background:#07100d;color:#ffffff;">
-                    <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#16b893;">Ractysh OTC</p>
+                  <td style="padding:32px;background:#1A0000;color:#ffffff;">
+                    <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B91C1C;">Ractysh OTC</p>
                     <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:34px;line-height:40px;color:#ffffff;">New Contact Submission</h1>
                     <p style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:rgba(255,255,255,0.68);">A mandate note was submitted through the OTC exchange landing page.</p>
                   </td>
@@ -121,15 +119,11 @@ function buildHtml(input: OtcContactEmailInput) {
                       ${dataRow("Submitted", formatSubmittedAt(input.createdAt))}
                       ${dataRow("Name", input.name)}
                       ${dataRow("Email", input.email)}
-                      ${dataRow("Company", input.company)}
-                      ${dataRow("Mandate Size", input.mandate)}
+                      ${dataRow("Phone", input.phone)}
+                      ${dataRow("Services", input.services?.length ? input.services.join(", ") : "Not specified")}
                       ${dataRow("Source Page", input.sourcePage)}
                       ${dataRow("Inquiry ID", input.inquiryId)}
                     </table>
-                    <div style="margin-top:24px;padding:20px;border-left:4px solid #16b893;background:#ffffff;">
-                      <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#69655d;">Message</p>
-                      <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#151512;">${paragraph(present(input.message))}</p>
-                    </div>
                     <p style="margin:26px 0 0;">
                       <a href="${escapeHtml(adminUrl)}" style="display:inline-block;border-radius:8px;background:#11140f;padding:13px 18px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">Open Admin Panel</a>
                     </p>

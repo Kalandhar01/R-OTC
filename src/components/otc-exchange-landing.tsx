@@ -1,10 +1,11 @@
 "use client";
 
-import { type ReactNode, useEffect, useRef, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import DeferredDither from "@/components/deferred-dither";
 import NavbarDemo from "@/components/navbar-menu-demo";
+import ConnectedContactSection from "@/components/connected-contact-section";
+import SiteFooter from "@/components/site-footer";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -32,17 +33,6 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 
-const ConnectedContactSection = dynamic(
-  () => import("@/components/connected-contact-section"),
-  { ssr: false },
-);
-const SiteFooter = dynamic(() => import("@/components/site-footer"), {
-  ssr: false,
-});
-const WorldMapDemo = dynamic(() => import("@/components/world-map-demo"), {
-  ssr: false,
-});
-
 const trustPoints = [
   "Verified mandate desk",
   "Quote discipline",
@@ -69,7 +59,7 @@ const heroStats: Array<[value: string, label: string]> = [
 
 const phoneNotifications = [
   {
-    app: "Ractysh OTC",
+    app: "RACTYSH OTC",
     icon: "R",
     time: "now",
     title: "Who We Are",
@@ -116,6 +106,45 @@ const projectFaqs = [
     question: "Do you provide records after settlement?",
     answer:
       "Every completed project can include transfer proof, settlement timestamps, client-facing receipts, desk notes, and a final archive so the client has a clean record without chasing scattered messages.",
+  },
+];
+
+const trustComplianceCards = [
+  {
+    title: "AML Compliance",
+    description:
+      "Our operations follow AML guidelines with thorough verification protocols, transaction monitoring, and record keeping that meet regulatory expectations for private OTC desks.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "FIU Focused Operations",
+    description:
+      "Structured desk procedures aligned with FIU reporting standards, ensuring transparent transaction documentation and compliance coordination for eligible mandates.",
+    icon: Landmark,
+  },
+  {
+    title: "GST Compliant Business",
+    description:
+      "Fully GST-registered operations with proper invoicing and tax documentation for every mandate, providing clarity for corporate and institutional clients.",
+    icon: ReceiptText,
+  },
+  {
+    title: "Secure Transactions",
+    description:
+      "End-to-end encrypted communication, multi-signature wallet coordination, and protected settlement routing to maintain confidentiality and transaction integrity.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Dedicated OTC Support",
+    description:
+      "Each mandate is assigned a dedicated desk coordinator who manages communication, documentation, and settlement steps from quote to completion.",
+    icon: Handshake,
+  },
+  {
+    title: "Institutional Grade Service",
+    description:
+      "Service standards designed for corporate treasury, family office, and qualified institutional clients who require professional coordination and settlement assurance.",
+    icon: Building2,
   },
 ];
 
@@ -379,7 +408,7 @@ export function OtcExchangeLanding() {
           pauseWhenPastHero
         />
       </div>
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_14%_24%,rgba(22,184,147,0.28),transparent_28%),radial-gradient(circle_at_78%_24%,rgba(189,121,29,0.2),transparent_31%),linear-gradient(120deg,rgba(4,9,7,0.84),rgba(7,11,8,0.52)_46%,rgba(4,7,10,0.9))]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_14%_24%,rgba(185,28,28,0.28),transparent_28%),linear-gradient(120deg,rgba(4,9,7,0.84),rgba(7,11,8,0.52)_46%,rgba(4,7,10,0.9))]" />
       <div className="fixed inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent" />
       <NavbarDemo />
 
@@ -397,7 +426,7 @@ export function OtcExchangeLanding() {
               text={activeHeadline}
               direction={headlinePhase}
               className="absolute left-0 top-0 inline-block max-w-[11ch] whitespace-normal break-words font-mono tracking-normal sm:max-w-[12ch] lg:max-w-[13ch]"
-              encryptedClassName="text-emerald-200/55"
+              encryptedClassName="text-red-200/55"
               revealedClassName="text-white"
               revealDelayMs={
                 headlinePhase === "reveal"
@@ -428,7 +457,7 @@ export function OtcExchangeLanding() {
           >
             <a
               href="#contact"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#16b893] px-6 text-sm font-bold text-[#04100c] shadow-[0_18px_60px_rgba(22,184,147,0.3)] transition hover:bg-[#54d7bb]"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#B91C1C] px-6 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.3)] transition hover:bg-[#EF4444]"
             >
               Start OTC mandate
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -474,7 +503,7 @@ export function OtcExchangeLanding() {
                 className="flex min-h-14 items-center gap-3 border border-white/12 bg-black/22 px-4 py-3 backdrop-blur-md"
               >
                 <ShieldCheck
-                  className="size-4 shrink-0 text-[#bd791d]"
+                  className="size-4 shrink-0 text-[#D4AF37]"
                   aria-hidden="true"
                 />
                 <span className="text-sm font-medium text-white/78">
@@ -492,11 +521,11 @@ export function OtcExchangeLanding() {
           className="relative mx-auto flex w-full max-w-[390px] justify-center lg:justify-end"
         >
           <div
-            className="absolute top-10 -right-8 h-72 w-44 rotate-12 bg-[#16b893]/18 blur-3xl"
+            className="absolute top-10 -right-8 h-72 w-44 rotate-12 bg-[#B91C1C]/18 blur-3xl"
             aria-hidden="true"
           />
           <div
-            className="absolute bottom-0 -left-12 h-56 w-52 -rotate-12 bg-[#bd791d]/18 blur-3xl"
+            className="absolute bottom-0 -left-12 h-56 w-52 -rotate-12 bg-[#B91C1C]/12 blur-3xl"
             aria-hidden="true"
           />
 
@@ -506,15 +535,15 @@ export function OtcExchangeLanding() {
             <span className="absolute -right-[7px] top-[9.8rem] h-20 w-[4px] rounded-r-full bg-[#858b89]" aria-hidden="true" />
             <div className="relative h-full rounded-[3.05rem] bg-[#050706] p-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),inset_0_0_30px_rgba(255,255,255,0.05)]">
               <div className="absolute left-1/2 top-[1.08rem] z-30 flex h-[2.15rem] w-[7.2rem] -translate-x-1/2 items-center justify-end rounded-full bg-black px-2 shadow-[0_9px_22px_rgba(0,0,0,0.42)]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#101819] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_0_10px_rgba(22,184,147,0.12)]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#101819] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_0_10px_rgba(185,28,28,0.12)]" />
               </div>
-              <div className="relative h-full overflow-hidden rounded-[2.58rem] border border-white/10 bg-[#07100d]">
+              <div className="relative h-full overflow-hidden rounded-[2.58rem] border border-white/10 bg-[#1A0000]">
                 <div
                   id="desk"
                   className="absolute inset-0 overflow-hidden px-3.5 pb-4 pt-4"
                   aria-label="OTC private desk phone interface"
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_15%,rgba(255,255,255,0.22),transparent_18%),radial-gradient(circle_at_78%_24%,rgba(22,184,147,0.68),transparent_34%),radial-gradient(circle_at_30%_78%,rgba(189,121,29,0.56),transparent_31%),linear-gradient(160deg,#0d1514_0%,#09251f_40%,#050403_100%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_15%,rgba(255,255,255,0.22),transparent_18%),radial-gradient(circle_at_78%_24%,rgba(185,28,28,0.68),transparent_34%),linear-gradient(160deg,#0d1514_0%,#09251f_40%,#050403_100%)]" />
                   <div className="pointer-events-none absolute inset-0 bg-black/18 backdrop-blur-[0.5px]" />
 
                   <div
@@ -589,7 +618,7 @@ export function OtcExchangeLanding() {
                           }`}
                         >
                           <div className="flex items-center gap-2">
-                            <span className="grid size-7 shrink-0 place-items-center rounded-[0.65rem] bg-[linear-gradient(135deg,#17cfa6,#0a4037)] text-[12px] font-bold text-white shadow-[0_6px_14px_rgba(0,0,0,0.18)]">
+                            <span className="grid size-7 shrink-0 place-items-center rounded-[0.65rem] bg-[linear-gradient(135deg,#DC2626,#7F1D1D)] text-[12px] font-bold text-white shadow-[0_6px_14px_rgba(0,0,0,0.18)]">
                               {notification.icon}
                             </span>
                             <span className="min-w-0 flex-1 truncate text-[12px] font-semibold leading-none text-black/74">
@@ -640,6 +669,9 @@ export function OtcExchangeLanding() {
         </motion.div>
       </section>
 
+      <ScrollRevealSection>
+        <TrustComplianceSection />
+      </ScrollRevealSection>
       <ConnectedPageBackground>
         <ScrollRevealSection>
           <OtcExchangeServicesSection />
@@ -650,32 +682,16 @@ export function OtcExchangeLanding() {
         <ScrollRevealSection>
           <TrustCompliancePartnershipSection />
         </ScrollRevealSection>
-        <LazyRenderSection
-          placeholderClassName="min-h-[720px]"
-          placeholderId="routes"
-        >
-          <ScrollRevealSection>
-            <WorldMapDemo />
-          </ScrollRevealSection>
-        </LazyRenderSection>
-        <LazyRenderSection
-          placeholderClassName="min-h-[900px]"
-          placeholderId="contact"
-          renderedClassName="scroll-mt-28 sm:scroll-mt-32"
-        >
-          <ScrollRevealSection>
-            <ConnectedContactSection />
-          </ScrollRevealSection>
-        </LazyRenderSection>
+        <ScrollRevealSection>
+          <ConnectedContactSection />
+        </ScrollRevealSection>
         <ScrollRevealSection>
           <ProjectsFaqSection />
         </ScrollRevealSection>
       </ConnectedPageBackground>
-      <LazyRenderSection placeholderClassName="min-h-[720px]">
-        <ScrollRevealSection amount={0.08}>
-          <SiteFooter />
-        </ScrollRevealSection>
-      </LazyRenderSection>
+      <ScrollRevealSection>
+        <SiteFooter />
+      </ScrollRevealSection>
     </main>
   );
 }
@@ -687,13 +703,12 @@ function OtcExchangeServicesSection() {
       id="otc-services"
       className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-200/34 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(22,184,147,0.12),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(247,210,127,0.08),transparent_28%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-black/40" />
 
       <div className="relative mx-auto max-w-[92rem]">
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
               OTC Exchange Services
             </p>
             <h2 className="max-w-4xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
@@ -727,9 +742,15 @@ function OtcExchangeServicesSection() {
             const Icon = service.icon;
 
             return (
-              <article
+              <motion.div
                 key={service.title}
-                className="group relative overflow-hidden rounded-2xl border border-white/8 bg-black/60 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-emerald-200/18"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.7, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              >
+              <article
+                className="group relative overflow-hidden rounded-2xl border border-white/8 bg-black/60 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-red-200/18"
               >
                 <div className="relative h-44 overflow-hidden sm:h-52">
                   <Image
@@ -740,7 +761,7 @@ function OtcExchangeServicesSection() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <span className="absolute bottom-3 left-4 flex size-8 items-center justify-center rounded-lg border border-emerald-200/20 bg-black/50 text-emerald-200 backdrop-blur-sm">
+                  <span className="absolute bottom-3 left-4 flex size-8 items-center justify-center rounded-lg border border-red-200/20 bg-black/50 text-red-200 backdrop-blur-sm">
                     <Icon className="size-3.5" aria-hidden="true" />
                   </span>
                 </div>
@@ -761,7 +782,7 @@ function OtcExchangeServicesSection() {
                     </p>
 
                     <div className="mt-4 border-t border-white/8 pt-3">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-emerald-200/60">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-red-200/60">
                         Key benefits
                       </p>
                       <ul className="mt-2 space-y-1.5">
@@ -771,7 +792,7 @@ function OtcExchangeServicesSection() {
                             className="flex gap-2 text-sm leading-5 text-white/60"
                           >
                             <Check
-                              className="mt-0.5 size-3.5 shrink-0 text-[#f3c987]"
+                              className="mt-0.5 size-3.5 shrink-0 text-[#D4AF37]"
                               aria-hidden="true"
                             />
                             <span>{benefit}</span>
@@ -783,13 +804,14 @@ function OtcExchangeServicesSection() {
 
                   <a
                     href="#contact"
-                    className="mt-4 inline-flex h-8 w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[10px] font-semibold text-white/70 transition hover:border-emerald-200/28 hover:bg-emerald-300/10 hover:text-white"
+                    className="mt-4 inline-flex h-8 w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[10px] font-semibold text-white/70 transition hover:border-red-200/28 hover:bg-red-300/10 hover:text-white"
                   >
                     {service.cta}
                     <ArrowRight className="size-3" aria-hidden="true" />
                   </a>
                 </div>
               </article>
+              </motion.div>
             );
           })}
         </div>
@@ -807,7 +829,7 @@ function WhyChooseOtcDeskSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="grid gap-10 lg:grid-cols-[0.58fr_1fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
               Why choose our OTC desk
             </p>
             <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -820,7 +842,7 @@ function WhyChooseOtcDeskSection() {
             </p>
             <a
               href="#contact"
-              className="mt-8 inline-flex min-h-12 items-center gap-2 bg-[#16b893] px-5 text-sm font-bold text-[#04100c] shadow-[0_18px_60px_rgba(22,184,147,0.22)] transition hover:bg-[#54d7bb]"
+              className="mt-8 inline-flex min-h-12 items-center gap-2 bg-[#B91C1C] px-5 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.22)] transition hover:bg-[#EF4444]"
             >
               Contact dedicated desk
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -828,15 +850,19 @@ function WhyChooseOtcDeskSection() {
           </div>
 
           <div className="grid border border-white/10 bg-black/24 backdrop-blur-xl sm:grid-cols-2">
-            {otcDeskAdvantages.map((item) => {
+            {otcDeskAdvantages.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <div
+                <motion.div
                   key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="border-b border-white/10 p-5 last:border-b-0 sm:border-r sm:p-6 sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
                 >
-                  <div className="mb-6 grid size-11 place-items-center border border-white/12 bg-white/[0.045] text-emerald-100">
+                  <div className="mb-6 grid size-11 place-items-center border border-white/12 bg-white/[0.045] text-red-100">
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">
@@ -845,10 +871,58 @@ function WhyChooseOtcDeskSection() {
                   <p className="mt-3 text-sm leading-7 text-white/56">
                     {item.description}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TrustComplianceSection() {
+  return (
+    <section
+      id="otc-trust"
+      className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
+    >
+      <div className="relative mx-auto max-w-[92rem]">
+        <div className="mb-14 text-center">
+          <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
+            Why Trade With <span className="text-[#C4A87C]">Ractysh OTC</span> Exchange
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/58">
+            Every transaction on our desk is backed by compliance frameworks,
+            secure routing, and professional coordination built for private
+            digital asset mandates.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {trustComplianceCards.map((card, index) => {
+            const Icon = card.icon;
+            return (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group rounded-2xl border border-white/8 bg-white/[0.03] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-[#B91C1C]/20 hover:-translate-y-0.5"
+              >
+                <div className="mb-5 grid size-11 place-items-center rounded-lg bg-[#B91C1C]/12 text-[#FEE2E2]">
+                  <Icon className="size-5" aria-hidden="true" />
+                </div>
+                <h3 className="text-base font-semibold text-white">
+                  {card.title}
+                </h3>
+                <p className="mt-2.5 text-sm leading-7 text-white/56">
+                  {card.description}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -879,16 +953,16 @@ function TrustCompliancePartnershipSection() {
       id="otc-trust"
       className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(22,184,147,0.1),transparent_31%),radial-gradient(circle_at_82%_76%,rgba(247,210,127,0.08),transparent_30%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(185,28,28,0.1),transparent_31%)]" />
 
       <div className="relative mx-auto max-w-[92rem]">
         <div className="mb-12 text-center">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
             What Our Clients Say
           </p>
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
             Trusted by verified <br />
-            <span className="text-emerald-200">private clients.</span>
+            <span className="text-red-200">private clients.</span>
           </h2>
         </div>
 
@@ -900,9 +974,9 @@ function TrustCompliancePartnershipSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative rounded-2xl border border-white/8 bg-white/[0.03] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-emerald-200/18 hover:-translate-y-1"
+              className="group relative rounded-2xl border border-white/8 bg-white/[0.03] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-red-200/18 hover:-translate-y-1"
             >
-              <svg className="mb-4 h-6 w-6 text-emerald-200/30" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="mb-4 h-6 w-6 text-red-200/30" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <p className="text-sm leading-7 text-white/60">
@@ -919,7 +993,7 @@ function TrustCompliancePartnershipSection() {
         <div className="mt-12 flex justify-center">
           <a
             href="#contact"
-            className="inline-flex min-h-12 items-center gap-2 border border-emerald-200/24 bg-emerald-300/10 px-6 text-sm font-bold text-emerald-50 transition hover:border-emerald-200/40 hover:bg-emerald-300/16"
+            className="inline-flex min-h-12 items-center gap-2 border border-red-200/24 bg-red-300/10 px-6 text-sm font-bold text-red-50 transition hover:border-red-200/40 hover:bg-red-300/16"
           >
             Discuss your requirements
             <ArrowRight className="size-4" aria-hidden="true" />
@@ -945,59 +1019,14 @@ function ConnectedPageBackground({ children }: { children: ReactNode }) {
         maxSpeed={18}
         minDelay={700}
         maxDelay={1600}
-        starColor="#f7d27f"
-        trailColor="#16b893"
+        starColor="#D4AF37"
+        trailColor="#B91C1C"
         starWidth={14}
         starCount={5}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.5)_32%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.78)),radial-gradient(circle_at_16%_34%,rgba(22,184,147,0.08),transparent_30%),radial-gradient(circle_at_86%_58%,rgba(247,210,127,0.07),transparent_32%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.5)_32%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.78)),radial-gradient(circle_at_16%_34%,rgba(185,28,28,0.08),transparent_30%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black to-transparent" />
       <div className="relative z-10">{children}</div>
-    </div>
-  );
-}
-
-function LazyRenderSection({
-  children,
-  placeholderClassName,
-  placeholderId,
-  renderedClassName,
-}: {
-  children: ReactNode;
-  placeholderClassName: string;
-  placeholderId?: string;
-  renderedClassName?: string;
-}) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [shouldRender, setShouldRender] = useState(false);
-
-  useEffect(() => {
-    if (shouldRender) return;
-
-    const node = containerRef.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry && entry.isIntersecting && entry.intersectionRatio >= 0.05) {
-          setShouldRender(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "0px", threshold: 0.05 },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [shouldRender]);
-
-  return (
-    <div
-      ref={containerRef}
-      id={placeholderId}
-      className={shouldRender ? renderedClassName : placeholderClassName}
-    >
-      {shouldRender ? children : null}
     </div>
   );
 }
@@ -1014,11 +1043,11 @@ function ProjectsFaqSection() {
       id="project-faq"
       className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(22,184,147,0.025),rgba(4,7,6,0)_42%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(185,28,28,0.025),rgba(4,7,6,0)_42%)]" />
 
       <div className="relative mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-emerald-200">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-red-200">
             Mandate questions
           </p>
           <h2 className="max-w-2xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -1037,7 +1066,14 @@ function ProjectsFaqSection() {
             const answerId = `project-faq-answer-${index}`;
 
             return (
-              <div key={item.question} className="border-b border-white/10 last:border-b-0">
+              <motion.div
+                key={item.question}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                className="border-b border-white/10 last:border-b-0"
+              >
                 <button
                   type="button"
                   aria-expanded={isOpen}
@@ -1045,13 +1081,13 @@ function ProjectsFaqSection() {
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   className="group flex w-full items-center gap-4 py-6 text-left transition hover:bg-white/[0.03] sm:gap-6 sm:px-4"
                 >
-                  <span className="hidden text-sm font-semibold text-emerald-200/70 sm:block">
+                  <span className="hidden text-sm font-semibold text-red-200/70 sm:block">
                     0{index + 1}
                   </span>
                   <span className="flex-1 text-lg font-medium leading-7 text-white sm:text-xl">
                     {item.question}
                   </span>
-                  <span className="flex size-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-white/72 transition group-hover:border-emerald-200/30 group-hover:text-emerald-100">
+                  <span className="flex size-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-white/72 transition group-hover:border-red-200/30 group-hover:text-red-100">
                     <ChevronDown
                       className={`size-4 transition duration-300 ${isOpen ? "rotate-180" : ""}`}
                       aria-hidden="true"
@@ -1067,7 +1103,7 @@ function ProjectsFaqSection() {
                     {item.answer}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

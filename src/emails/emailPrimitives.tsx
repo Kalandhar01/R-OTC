@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-head-element -- Email markup renders raw HTML outside the Next page tree. */
-import * as React from "react";
 import type {
   AnchorHTMLAttributes,
   CSSProperties,

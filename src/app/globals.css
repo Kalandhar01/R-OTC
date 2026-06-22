@@ -7,10 +7,10 @@
   --surface-soft: #ebe7da;
   --muted: #617067;
   --line: rgba(22, 33, 28, 0.14);
-  --accent: #0f8a70;
-  --accent-strong: #16b893;
-  --accent-warm: #bd791d;
-  --accent-cool: #157d9d;
+  --accent: #B91C1C;
+  --accent-strong: #B91C1C;
+  --accent-warm: #D4AF37;
+  --accent-cool: #7F1D1D;
 }
 
 @theme inline {
@@ -47,5 +47,5 @@ textarea {
 }
 
 ::selection {
-  background: rgba(22, 184, 147, 0.28);
+  background: rgba(185, 28, 28, 0.28);
 }
