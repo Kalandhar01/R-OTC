@@ -40,7 +40,7 @@ const trustPoints = [
 ];
 
 const heroHeadlineSentences = [
-  "Ractysh OTC Exchange for private blocks.",
+  "RACTYSH ASSOCIATES PVT LTD for private blocks.",
   "Verified OTC mandates close clean deals.",
   "Private OTC routes protect clean blocks.",
   "Serious OTC desks route verified blocks.",
@@ -59,7 +59,7 @@ const heroStats: Array<[value: string, label: string]> = [
 
 const phoneNotifications = [
   {
-    app: "RACTYSH OTC",
+    app: "RACTYSH ASSOCIATES",
     icon: "R",
     time: "now",
     title: "Who We Are",
@@ -408,7 +408,7 @@ export function OtcExchangeLanding() {
           pauseWhenPastHero
         />
       </div>
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_14%_24%,rgba(185,28,28,0.28),transparent_28%),linear-gradient(120deg,rgba(4,9,7,0.84),rgba(7,11,8,0.52)_46%,rgba(4,7,10,0.9))]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_14%_24%,rgba(232,93,93,0.28),transparent_28%),linear-gradient(120deg,rgba(4,9,7,0.84),rgba(7,11,8,0.52)_46%,rgba(4,7,10,0.9))]" />
       <div className="fixed inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent" />
       <NavbarDemo />
 
@@ -426,7 +426,7 @@ export function OtcExchangeLanding() {
               text={activeHeadline}
               direction={headlinePhase}
               className="absolute left-0 top-0 inline-block max-w-[11ch] whitespace-normal break-words font-mono tracking-normal sm:max-w-[12ch] lg:max-w-[13ch]"
-              encryptedClassName="text-red-200/55"
+              encryptedClassName="text-[#F5C2C2]/55"
               revealedClassName="text-white"
               revealDelayMs={
                 headlinePhase === "reveal"
@@ -446,7 +446,11 @@ export function OtcExchangeLanding() {
           >
             A private exchange desk for crypto, treasury, and institutional
             mandates, built around verification, quote control, protected
-            routing, and final settlement records.
+            routing, and final settlement records. Operating from Dubai, serving
+            clients across international markets. RACTYSH ASSOCIATES PVT LTD
+            acts as a trusted intermediary service provider, connecting
+            businesses, investors, and opportunities through reliable market
+            expertise and professional advisory support.
           </motion.p>
 
           <motion.div
@@ -457,7 +461,7 @@ export function OtcExchangeLanding() {
           >
             <a
               href="#contact"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#B91C1C] px-6 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.3)] transition hover:bg-[#EF4444]"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#E85D5D] px-6 text-sm font-bold text-[#FFF0F0] shadow-[0_18px_50px_rgba(232,93,93,0.3)] transition hover:bg-[#F47575]"
             >
               Start OTC mandate
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -521,11 +525,11 @@ export function OtcExchangeLanding() {
           className="relative mx-auto flex w-full max-w-[390px] justify-center lg:justify-end"
         >
           <div
-            className="absolute top-10 -right-8 h-72 w-44 rotate-12 bg-[#B91C1C]/18 blur-3xl"
+            className="absolute top-10 -right-8 h-72 w-44 rotate-12 bg-[#E85D5D]/18 blur-3xl"
             aria-hidden="true"
           />
           <div
-            className="absolute bottom-0 -left-12 h-56 w-52 -rotate-12 bg-[#B91C1C]/12 blur-3xl"
+            className="absolute bottom-0 -left-12 h-56 w-52 -rotate-12 bg-[#E85D5D]/12 blur-3xl"
             aria-hidden="true"
           />
 
@@ -535,15 +539,15 @@ export function OtcExchangeLanding() {
             <span className="absolute -right-[7px] top-[9.8rem] h-20 w-[4px] rounded-r-full bg-[#858b89]" aria-hidden="true" />
             <div className="relative h-full rounded-[3.05rem] bg-[#050706] p-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),inset_0_0_30px_rgba(255,255,255,0.05)]">
               <div className="absolute left-1/2 top-[1.08rem] z-30 flex h-[2.15rem] w-[7.2rem] -translate-x-1/2 items-center justify-end rounded-full bg-black px-2 shadow-[0_9px_22px_rgba(0,0,0,0.42)]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#101819] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_0_10px_rgba(185,28,28,0.12)]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#101819] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_0_10px_rgba(232,93,93,0.12)]" />
               </div>
-              <div className="relative h-full overflow-hidden rounded-[2.58rem] border border-white/10 bg-[#1A0000]">
+              <div className="relative h-full overflow-hidden rounded-[2.58rem] border border-white/10 bg-[#1A0505]">
                 <div
                   id="desk"
                   className="absolute inset-0 overflow-hidden px-3.5 pb-4 pt-4"
                   aria-label="OTC private desk phone interface"
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_15%,rgba(255,255,255,0.22),transparent_18%),radial-gradient(circle_at_78%_24%,rgba(185,28,28,0.68),transparent_34%),linear-gradient(160deg,#0d1514_0%,#09251f_40%,#050403_100%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_15%,rgba(255,255,255,0.22),transparent_18%),radial-gradient(circle_at_78%_24%,rgba(232,93,93,0.68),transparent_34%),linear-gradient(160deg,#0d1514_0%,#09251f_40%,#050403_100%)]" />
                   <div className="pointer-events-none absolute inset-0 bg-black/18 backdrop-blur-[0.5px]" />
 
                   <div
@@ -618,7 +622,7 @@ export function OtcExchangeLanding() {
                           }`}
                         >
                           <div className="flex items-center gap-2">
-                            <span className="grid size-7 shrink-0 place-items-center rounded-[0.65rem] bg-[linear-gradient(135deg,#DC2626,#7F1D1D)] text-[12px] font-bold text-white shadow-[0_6px_14px_rgba(0,0,0,0.18)]">
+                            <span className="grid size-7 shrink-0 place-items-center rounded-[0.65rem] bg-[linear-gradient(135deg,#E85D5D,#C94A4A)] text-[12px] font-bold text-white shadow-[0_6px_14px_rgba(0,0,0,0.18)]">
                               {notification.icon}
                             </span>
                             <span className="min-w-0 flex-1 truncate text-[12px] font-semibold leading-none text-black/74">
@@ -708,7 +712,7 @@ function OtcExchangeServicesSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
               OTC Exchange Services
             </p>
             <h2 className="max-w-4xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
@@ -717,7 +721,7 @@ function OtcExchangeServicesSection() {
           </div>
           <div className="border-l border-white/12 pl-5 lg:pl-8">
             <p className="max-w-2xl text-base leading-8 text-white/58">
-              Ractysh operates a secure OTC Digital Asset Exchange Division for
+              RACTYSH ASSOCIATES PVT LTD operates a secure OTC Digital Asset Exchange Division for
               eligible clients seeking cryptocurrency and stablecoin transaction
               support with verification, privacy, documentation, and disciplined
               execution standards.
@@ -750,7 +754,7 @@ function OtcExchangeServicesSection() {
                 transition={{ duration: 0.7, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
               >
               <article
-                className="group relative overflow-hidden rounded-2xl border border-white/8 bg-black/60 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-red-200/18"
+                className="group relative overflow-hidden rounded-2xl border border-white/8 bg-black/60 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-[#F5C2C2]/30"
               >
                 <div className="relative h-44 overflow-hidden sm:h-52">
                   <Image
@@ -761,7 +765,7 @@ function OtcExchangeServicesSection() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <span className="absolute bottom-3 left-4 flex size-8 items-center justify-center rounded-lg border border-red-200/20 bg-black/50 text-red-200 backdrop-blur-sm">
+                  <span className="absolute bottom-3 left-4 flex size-8 items-center justify-center rounded-lg border border-[#F5C2C2]/25 bg-black/50 text-[#F5C2C2] backdrop-blur-sm">
                     <Icon className="size-3.5" aria-hidden="true" />
                   </span>
                 </div>
@@ -782,7 +786,7 @@ function OtcExchangeServicesSection() {
                     </p>
 
                     <div className="mt-4 border-t border-white/8 pt-3">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-red-200/60">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#F5C2C2]/60">
                         Key benefits
                       </p>
                       <ul className="mt-2 space-y-1.5">
@@ -804,7 +808,7 @@ function OtcExchangeServicesSection() {
 
                   <a
                     href="#contact"
-                    className="mt-4 inline-flex h-8 w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[10px] font-semibold text-white/70 transition hover:border-red-200/28 hover:bg-red-300/10 hover:text-white"
+                    className="mt-4 inline-flex h-8 w-fit items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[10px] font-semibold text-white/70 transition hover:border-[#F5C2C2]/40 hover:bg-[#F5A3A3]/15 hover:text-white"
                   >
                     {service.cta}
                     <ArrowRight className="size-3" aria-hidden="true" />
@@ -829,7 +833,7 @@ function WhyChooseOtcDeskSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="grid gap-10 lg:grid-cols-[0.58fr_1fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
               Why choose our OTC desk
             </p>
             <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -842,7 +846,7 @@ function WhyChooseOtcDeskSection() {
             </p>
             <a
               href="#contact"
-              className="mt-8 inline-flex min-h-12 items-center gap-2 bg-[#B91C1C] px-5 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.22)] transition hover:bg-[#EF4444]"
+              className="mt-8 inline-flex min-h-12 items-center gap-2 bg-[#E85D5D] px-5 text-sm font-bold text-[#FFF0F0] shadow-[0_18px_50px_rgba(232,93,93,0.22)] transition hover:bg-[#F47575]"
             >
               Contact dedicated desk
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -862,7 +866,7 @@ function WhyChooseOtcDeskSection() {
                   transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="border-b border-white/10 p-5 last:border-b-0 sm:border-r sm:p-6 sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
                 >
-                  <div className="mb-6 grid size-11 place-items-center border border-white/12 bg-white/[0.045] text-red-100">
+                  <div className="mb-6 grid size-11 place-items-center border border-white/12 bg-white/[0.045] text-[#FDE8E8]">
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">
@@ -890,7 +894,7 @@ function TrustComplianceSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
-            Why Trade With <span className="text-red-600">Ractysh OTC</span> Exchange
+            Why Trade With <span className="text-[#E85D5D]">RACTYSH ASSOCIATES PVT LTD</span> Exchange
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/58">
             Every transaction on our desk is backed by compliance frameworks,
@@ -909,9 +913,9 @@ function TrustComplianceSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="group rounded-2xl border border-white/8 bg-white/[0.03] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-[#B91C1C]/20 hover:-translate-y-0.5"
+                className="group rounded-2xl border border-white/8 bg-white/[0.03] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-[#E85D5D]/20 hover:-translate-y-0.5"
               >
-                <div className="mb-5 grid size-11 place-items-center rounded-lg bg-[#B91C1C]/12 text-[#FEE2E2]">
+                <div className="mb-5 grid size-11 place-items-center rounded-lg bg-[#E85D5D]/12 text-[#FFF0F0]">
                   <Icon className="size-5" aria-hidden="true" />
                 </div>
                 <h3 className="text-base font-semibold text-white">
@@ -932,17 +936,17 @@ function TrustComplianceSection() {
 function TrustCompliancePartnershipSection() {
   const testimonials = [
     {
-      quote: "Working with Ractysh's OTC desk gave us the privacy and execution confidence we needed for our corporate treasury conversion. The team was thorough, responsive, and the entire settlement was documented end-to-end.",
+      quote: "Working with RACTYSH ASSOCIATES PVT LTD's OTC desk gave us the privacy and execution confidence we needed for our corporate treasury conversion. The team was thorough, responsive, and the entire settlement was documented end-to-end.",
       name: "Rajesh Mehta",
       role: "CFO, Meridian Ventures, Mumbai",
     },
     {
-      quote: "As a family office managing digital assets, we needed a partner who understood compliance without unnecessary friction. Ractysh delivered — clear process, professional communication, and seamless settlement.",
+      quote: "As a family office managing digital assets, we needed a partner who understood compliance without unnecessary friction. RACTYSH ASSOCIATES PVT LTD delivered — clear process, professional communication, and seamless settlement.",
       name: "Anita Krishnan",
       role: "Director, Surya Capital, Bengaluru",
     },
     {
-      quote: "The documentation and transaction records provided by Ractysh made our audit process significantly smoother. Their compliance-aware approach gives us confidence in every trade.",
+      quote: "The documentation and transaction records provided by RACTYSH ASSOCIATES PVT LTD made our audit process significantly smoother. Their compliance-aware approach gives us confidence in every trade.",
       name: "Vikram Patel",
       role: "Finance Controller, Lotus Group, Ahmedabad",
     },
@@ -953,16 +957,16 @@ function TrustCompliancePartnershipSection() {
       id="otc-trust"
       className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(185,28,28,0.1),transparent_31%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(232,93,93,0.1),transparent_31%)]" />
 
       <div className="relative mx-auto max-w-[92rem]">
         <div className="mb-12 text-center">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-red-200">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
             What Our Clients Say
           </p>
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
             Trusted by verified <br />
-            <span className="text-red-200">private clients.</span>
+            <span className="text-[#F5C2C2]">private clients.</span>
           </h2>
         </div>
 
@@ -974,9 +978,9 @@ function TrustCompliancePartnershipSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative rounded-2xl border border-white/8 bg-white/[0.03] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-red-200/18 hover:-translate-y-1"
+              className="group relative rounded-2xl border border-white/8 bg-white/[0.03] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-[#F5C2C2]/30 hover:-translate-y-1"
             >
-              <svg className="mb-4 h-6 w-6 text-red-200/30" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="mb-4 h-6 w-6 text-[#F5C2C2]/30" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <p className="text-sm leading-7 text-white/60">
@@ -993,7 +997,7 @@ function TrustCompliancePartnershipSection() {
         <div className="mt-12 flex justify-center">
           <a
             href="#contact"
-            className="inline-flex min-h-12 items-center gap-2 border border-red-200/24 bg-red-300/10 px-6 text-sm font-bold text-red-50 transition hover:border-red-200/40 hover:bg-red-300/16"
+            className="inline-flex min-h-12 items-center gap-2 border border-[#F5C2C2]/30 bg-[#F5A3A3]/15 px-6 text-sm font-bold text-[#FFF5F5] transition hover:border-[#F5C2C2]/50 hover:bg-[#F5A3A3]/22"
           >
             Discuss your requirements
             <ArrowRight className="size-4" aria-hidden="true" />
@@ -1020,11 +1024,11 @@ function ConnectedPageBackground({ children }: { children: ReactNode }) {
         minDelay={700}
         maxDelay={1600}
         starColor="#D4AF37"
-        trailColor="#B91C1C"
+        trailColor="#E85D5D"
         starWidth={14}
         starCount={5}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.5)_32%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.78)),radial-gradient(circle_at_16%_34%,rgba(185,28,28,0.08),transparent_30%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.5)_32%,rgba(0,0,0,0.42)_72%,rgba(0,0,0,0.78)),radial-gradient(circle_at_16%_34%,rgba(232,93,93,0.08),transparent_30%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black to-transparent" />
       <div className="relative z-10">{children}</div>
     </div>
@@ -1043,11 +1047,11 @@ function ProjectsFaqSection() {
       id="project-faq"
       className="relative z-20 overflow-hidden bg-transparent px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(185,28,28,0.025),rgba(4,7,6,0)_42%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(232,93,93,0.025),rgba(4,7,6,0)_42%)]" />
 
       <div className="relative mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-red-200">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#F5C2C2]">
             Mandate questions
           </p>
           <h2 className="max-w-2xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -1081,13 +1085,13 @@ function ProjectsFaqSection() {
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   className="group flex w-full items-center gap-4 py-6 text-left transition hover:bg-white/[0.03] sm:gap-6 sm:px-4"
                 >
-                  <span className="hidden text-sm font-semibold text-red-200/70 sm:block">
+                  <span className="hidden text-sm font-semibold text-[#F5C2C2]/70 sm:block">
                     0{index + 1}
                   </span>
                   <span className="flex-1 text-lg font-medium leading-7 text-white sm:text-xl">
                     {item.question}
                   </span>
-                  <span className="flex size-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-white/72 transition group-hover:border-red-200/30 group-hover:text-red-100">
+                  <span className="flex size-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-white/72 transition group-hover:border-[#F5C2C2]/40 group-hover:text-[#FDE8E8]">
                     <ChevronDown
                       className={`size-4 transition duration-300 ${isOpen ? "rotate-180" : ""}`}
                       aria-hidden="true"

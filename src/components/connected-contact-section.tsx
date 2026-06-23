@@ -82,7 +82,7 @@ function SelectDropdown<T extends string>({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-12 w-full items-center justify-between rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition focus:border-[#B91C1C] focus:ring-2 focus:ring-[#B91C1C]/20"
+        className="flex h-12 w-full items-center justify-between rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition focus:border-[#E85D5D] focus:ring-2 focus:ring-[#E85D5D]/20"
       >
         <span className={!value ? "text-[#8f8a7d]" : ""}>
           {value || placeholder}
@@ -118,12 +118,12 @@ function SelectDropdown<T extends string>({
                     setOpen(false);
                     setSearch("");
                   }}
-                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-[#11140f] transition hover:bg-[#B91C1C]/5"
+                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-[#11140f] transition hover:bg-[#E85D5D]/5"
                 >
                   <span
                     className={`flex size-4 shrink-0 items-center justify-center rounded border ${
                       value === option
-                        ? "border-[#B91C1C] bg-[#B91C1C]"
+                        ? "border-[#E85D5D] bg-[#E85D5D]"
                         : "border-[#d7d2c5]"
                     }`}
                   >
@@ -181,7 +181,7 @@ function ServiceCombobox({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-12 w-full items-center justify-between rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition focus:border-[#B91C1C] focus:ring-2 focus:ring-[#B91C1C]/20"
+        className="flex h-12 w-full items-center justify-between rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition focus:border-[#E85D5D] focus:ring-2 focus:ring-[#E85D5D]/20"
       >
         <span className={selected.length === 0 ? "text-[#8f8a7d]" : ""}>
           {selected.length === 0
@@ -196,7 +196,7 @@ function ServiceCombobox({
           {selected.map((s) => (
             <span
               key={s}
-              className="inline-flex items-center gap-1 rounded-md bg-[#B91C1C]/10 px-2 py-1 text-xs font-medium text-[#7F1D1D]"
+              className="inline-flex items-center gap-1 rounded-md bg-[#E85D5D]/10 px-2 py-1 text-xs font-medium text-[#C94A4A]"
             >
               {s}
               <button type="button" onClick={() => toggle(s)} className="hover:opacity-60">
@@ -229,12 +229,12 @@ function ServiceCombobox({
                   key={service}
                   type="button"
                   onClick={() => toggle(service)}
-                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-[#11140f] transition hover:bg-[#B91C1C]/5"
+                  className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-[#11140f] transition hover:bg-[#E85D5D]/5"
                 >
                   <span
                     className={`flex size-4 shrink-0 items-center justify-center rounded border ${
                       selected.includes(service)
-                        ? "border-[#B91C1C] bg-[#B91C1C]"
+                        ? "border-[#E85D5D] bg-[#E85D5D]"
                         : "border-[#d7d2c5]"
                     }`}
                   >
@@ -320,13 +320,13 @@ export default function ConnectedContactSection() {
       className="relative z-20 scroll-mt-28 overflow-hidden bg-transparent px-5 py-20 text-white sm:scroll-mt-32 sm:px-8 lg:px-10 lg:py-28"
       id="contact"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(185,28,28,0.025),rgba(4,7,6,0)_42%,rgba(212,175,55,0.03))]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(232,93,93,0.025),rgba(4,7,6,0)_42%,rgba(212,175,55,0.03))]" />
 
       <div className="relative mx-auto grid max-w-7xl overflow-hidden border border-white/10 bg-black/24 shadow-[0_34px_120px_rgba(0,0,0,0.36),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl lg:min-h-[720px] lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative min-h-[420px] overflow-hidden border-b border-white/10 bg-[#050806] lg:min-h-0 lg:border-b-0 lg:border-r">
           <div className="absolute inset-0">
             <DeferredDither
-              waveColor={[0.24, 0.92, 0.76]}
+              waveColor={[1, 1, 1]}
               disableAnimation={false}
               enableMouseInteraction
               mouseRadius={0.88}
@@ -337,35 +337,16 @@ export default function ConnectedContactSection() {
               waveSpeed={0.1}
             />
           </div>
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.18),transparent_23%),radial-gradient(circle_at_74%_30%,rgba(185,28,28,0.22),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.48))]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.18),transparent_23%),radial-gradient(circle_at_74%_30%,rgba(232,93,93,0.22),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.48))]" />
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:28px_28px] opacity-30" />
 
           <div className="relative flex h-full min-h-[420px] flex-col justify-between p-6 sm:p-8 lg:min-h-[720px] lg:p-10">
-            <div className="inline-flex w-fit items-center gap-3 border border-white/12 bg-black/28 px-4 py-3 text-sm font-semibold text-white/76 backdrop-blur-md">
-              <span className="grid size-8 place-items-center rounded-full bg-red-300/14 text-red-100">
-                R
-              </span>
-              Ractysh OTC Exchange
-            </div>
-
             <div>
               <p className="max-w-xl text-3xl font-medium leading-tight tracking-tight text-white sm:text-4xl">
                 &ldquo;Private mandates need quiet routing, clean authority, and a
                 settlement record operators can trust.&rdquo;
               </p>
-              <div className="mt-7 flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-full border border-red-200/25 bg-red-300/14 text-sm font-bold text-red-100">
-                  OTC
-                </span>
-                <span>
-                  <span className="block text-sm font-semibold text-white">
-                    Mandate Desk
-                  </span>
-                  <span className="mt-1 block text-sm text-white/52">
-                    Private exchange coordination
-                  </span>
-                </span>
-              </div>
+
             </div>
           </div>
         </div>
@@ -373,7 +354,7 @@ export default function ConnectedContactSection() {
         <div className="bg-[#f3f1ea] px-5 py-10 text-[#151512] sm:px-8 lg:px-12 lg:py-14">
           <div className="mx-auto max-w-xl">
             <div className="grid size-14 place-items-center rounded-md bg-white shadow-[0_18px_48px_rgba(0,0,0,0.12)]">
-              <div className="grid size-10 place-items-center rounded-sm bg-[#1A0000] text-red-200">
+              <div className="grid size-10 place-items-center rounded-sm bg-[#1A0505] text-[#F5C2C2]">
                 <Mail className="size-5" aria-hidden="true" />
               </div>
             </div>
@@ -382,14 +363,23 @@ export default function ConnectedContactSection() {
               Start Your OTC Exchange Mandate
             </h2>
             <p className="mt-5 max-w-lg text-base leading-7 text-[#58564f]">
-              Tell us about your mandate, required services, asset class, and
-              settlement expectations. Our OTC desk team will review your
-              requirements and coordinate next steps. Email us at{" "}
+               RACTYSH ASSOCIATES PVT LTD acts as a trusted intermediary service
+                provider, connecting institutional clients with liquidity providers
+                and settlement operators. Tell us about your mandate, required
+                services, asset class, and settlement expectations. Our desk team
+                will review your requirements and coordinate next steps. Reach us at{" "}
               <a
-                href="mailto:desk@ractysh.com"
-                className="font-medium text-[#11140f] underline decoration-[#B91C1C]/40 underline-offset-4 transition hover:decoration-[#B91C1C]"
+                href="mailto:ractyshassociates@gmail.com"
+                className="font-medium text-[#11140f] underline decoration-[#E85D5D]/40 underline-offset-4 transition hover:decoration-[#E85D5D]"
               >
-                desk@ractysh.com
+                ractyshassociates@gmail.com
+              </a>{" "}
+              or call{" "}
+              <a
+                href="tel:+918300660698"
+                className="font-medium text-[#11140f] underline decoration-[#E85D5D]/40 underline-offset-4 transition hover:decoration-[#E85D5D]"
+              >
+                +91 83006 60698
               </a>
               .
             </p>
@@ -405,7 +395,7 @@ export default function ConnectedContactSection() {
                   autoComplete="name"
                   placeholder="Your full name"
                   required
-                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#B91C1C] focus:ring-2 focus:ring-[#B91C1C]/20"
+                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#E85D5D] focus:ring-2 focus:ring-[#E85D5D]/20"
                 />
               </label>
 
@@ -419,7 +409,7 @@ export default function ConnectedContactSection() {
                   autoComplete="email"
                   placeholder="email@example.com"
                   required
-                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#B91C1C] focus:ring-2 focus:ring-[#B91C1C]/20"
+                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#E85D5D] focus:ring-2 focus:ring-[#E85D5D]/20"
                 />
               </label>
 
@@ -433,7 +423,7 @@ export default function ConnectedContactSection() {
                   autoComplete="tel"
                   placeholder="+91 98765 43210"
                   required
-                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#B91C1C] focus:ring-2 focus:ring-[#B91C1C]/20"
+                  className="h-12 w-full rounded-md border border-[#d7d2c5] bg-white px-4 text-base text-[#11140f] shadow-sm outline-none transition placeholder:text-[#8f8a7d] focus:border-[#E85D5D] focus:ring-2 focus:ring-[#E85D5D]/20"
                 />
               </label>
 
@@ -446,8 +436,8 @@ export default function ConnectedContactSection() {
                 <p
                   className={`rounded-md border px-4 py-3 text-sm leading-6 ${
                     formStatus === "success"
-                      ? "border-[#B91C1C]/35 bg-[#B91C1C]/10 text-[#7F1D1D]"
-                      : "border-red-300 bg-red-50 text-red-700"
+                      ? "border-[#E85D5D]/35 bg-[#E85D5D]/10 text-[#C94A4A]"
+                      : "border-[#F5C2C2]/30 bg-[#FFF0F0] text-[#C94A4A]"
                   }`}
                 >
                   {formMessage}

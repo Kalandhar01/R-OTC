@@ -129,7 +129,7 @@ async function notifyAdmins(subscriber: SubscriberDoc, source: string) {
     adminId: admin.id,
     dedupeKey: `${admin.id}:subscriber:NewsletterSubscriber:${subscriber.id}`,
     title: "New OTC Exchange Newsletter Subscriber",
-    message: `${subscriber.email} subscribed from Ractysh OTC Exchange.`,
+    message: `${subscriber.email} subscribed from RACTYSH ASSOCIATES PVT LTD OTC Exchange.`,
     project: division,
     division,
     priority: "medium",

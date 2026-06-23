@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ractysh OTC Exchange",
+  title: "RACTYSH ASSOCIATES PVT LTD | OTC Exchange Desk",
   description:
-    "Private OTC exchange desk for verified mandates, controlled quotes, protected routing, and clean settlement reporting.",
+    "RACTYSH ASSOCIATES PVT LTD operates as a trusted intermediary for private OTC exchange desk services, handling verified mandates, controlled quotes, protected routing, and clean settlement reporting.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

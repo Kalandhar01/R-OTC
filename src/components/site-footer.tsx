@@ -44,10 +44,11 @@ const footerColumns = [
   {
     title: "Connect",
     links: [
-      { label: "Email desk", href: "mailto:desk@ractysh.com" },
+      { label: "Email desk", href: "mailto:ractyshassociates@gmail.com" },
+      { label: "Phone", href: "tel:+918300660698" },
       { label: "Client request", href: "#contact" },
       { label: "Private review", href: "#contact" },
-      { label: "Ractysh home", href: "/" },
+      { label: "ASSOCIATES home", href: "/" },
     ],
   },
 ];
@@ -134,7 +135,7 @@ export default function SiteFooter() {
 
   return (
     <footer className="relative z-20 overflow-hidden bg-[#020403] px-5 pt-20 pb-8 text-white sm:px-8 lg:px-10 lg:pt-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(185,28,28,0.08),transparent_40%),radial-gradient(circle_at_84%_20%,rgba(243,201,135,0.06),transparent_40%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(232,93,93,0.08),transparent_40%),radial-gradient(circle_at_84%_20%,rgba(243,201,135,0.06),transparent_40%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#040706] to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-[92rem]">
@@ -143,7 +144,7 @@ export default function SiteFooter() {
             <Link
               href="/"
               className="inline-flex items-center gap-3 text-white"
-              aria-label="Ractysh OTC home"
+              aria-label="RACTYSH ASSOCIATES PVT LTD home"
             >
               <Image
                 src="/logo.png"
@@ -154,18 +155,22 @@ export default function SiteFooter() {
               />
               <span>
                 <span className="block text-xl font-bold">
-                  RACTYSH OTC
+                  RACTYSH ASSOCIATES
                 </span>
                 <span className="mt-1 block text-sm font-medium tracking-wider text-[#C4A87C]">
-                  Private Limited
+                  ASSOCIATES
                 </span>
               </span>
             </Link>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/58 sm:text-lg">
-              Ractysh OTC Exchange gives verified counterparties a private
+              RACTYSH ASSOCIATES PVT LTD gives verified counterparties a private
               operating layer for price discipline, route control, settlement
-              clarity, and clean reporting.
+              clarity, and clean reporting. Operating from Dubai, serving
+              clients across international markets. RACTYSH ASSOCIATES PVT LTD
+              acts as a trusted intermediary service provider, connecting
+              businesses, investors, and opportunities through reliable market
+              expertise and professional advisory support.
             </p>
 
           </div>
@@ -204,13 +209,13 @@ export default function SiteFooter() {
                       }}
                       aria-describedby="footer-subscribe-status"
                       placeholder="Enter email"
-                      className="min-h-12 w-full rounded-full border border-white/12 bg-white/[0.045] pr-4 pl-11 text-sm font-medium text-white outline-none backdrop-blur-md transition placeholder:text-white/34 focus:border-red-200/30 focus:bg-white/[0.07] focus:ring-2 focus:ring-red-300/10"
+                      className="min-h-12 w-full rounded-full border border-white/12 bg-white/[0.045] pr-4 pl-11 text-sm font-medium text-white outline-none backdrop-blur-md transition placeholder:text-white/34 focus:border-[#F5C2C2]/40 focus:bg-white/[0.07] focus:ring-2 focus:ring-[#F5C2C2]/15"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex min-h-12 min-w-[9rem] items-center justify-center gap-2 rounded-full bg-[#B91C1C] px-6 text-sm font-bold text-[#FEE2E2] shadow-[0_18px_60px_rgba(185,28,28,0.24)] transition hover:bg-[#EF4444] disabled:cursor-not-allowed disabled:bg-white/14 disabled:text-white/42 disabled:shadow-none"
+                    className="inline-flex min-h-12 min-w-[9rem] items-center justify-center gap-2 rounded-full bg-[#E85D5D] px-6 text-sm font-bold text-[#FFF0F0] shadow-[0_18px_50px_rgba(232,93,93,0.24)] transition hover:bg-[#F47575] disabled:cursor-not-allowed disabled:bg-white/14 disabled:text-white/42 disabled:shadow-none"
                   >
                     {isSubmitting ? "Sending..." : "Subscribe"}
                     <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -227,10 +232,10 @@ export default function SiteFooter() {
                   >
                     <div
                       role="status"
-                      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-red-100/25 bg-white/[0.085] px-5 text-sm font-semibold text-red-50 shadow-[0_22px_70px_rgba(185,28,28,0.2)] backdrop-blur-2xl"
+                      className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-[#FDE8E8]/25 bg-white/[0.085] px-5 text-sm font-semibold text-[#FFF5F5] shadow-[0_22px_70px_rgba(232,93,93,0.2)] backdrop-blur-2xl"
                     >
                       <CheckCircle2
-                        className="size-4 text-red-200"
+                        className="size-4 text-[#F5C2C2]"
                         aria-hidden="true"
                       />
                       <span>{subscribeMessage || "Subscribed"}</span>
@@ -240,7 +245,7 @@ export default function SiteFooter() {
               </div>
               <a
                 href="#contact"
-                className="inline-flex min-h-12 items-center rounded-full border border-white/12 bg-white/[0.045] px-6 text-sm font-semibold text-white/70 backdrop-blur-md transition hover:border-red-200/25 hover:text-white"
+                className="inline-flex min-h-12 items-center rounded-full border border-white/12 bg-white/[0.045] px-6 text-sm font-semibold text-white/70 backdrop-blur-md transition hover:border-[#F5C2C2]/35 hover:text-white"
               >
                 Start mandate
               </a>
@@ -252,8 +257,8 @@ export default function SiteFooter() {
                 isSubscribed
                   ? "sr-only"
                   : subscribeStatus === "error"
-                    ? "min-h-5 text-rose-200"
-                    : "min-h-5 text-red-100/80"
+                    ? "min-h-5 text-[#F5C2C2]"
+                    : "min-h-5 text-[#FDE8E8]/80"
               }`}
             >
               {isSubscribed ? "" : subscribeMessage}
@@ -263,7 +268,7 @@ export default function SiteFooter() {
 
         <div className="grid gap-10 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-200">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
               Global private desk
             </p>
             <p className="mt-4 max-w-md text-sm leading-7 text-white/50">
@@ -273,7 +278,7 @@ export default function SiteFooter() {
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/52">
               <span className="inline-flex min-h-10 items-center gap-2 border border-white/10 bg-black/20 px-3">
-                <Globe2 className="size-4 text-red-200" aria-hidden="true" />
+                <Globe2 className="size-4 text-[#F5C2C2]" aria-hidden="true" />
                 Global routes
               </span>
               <span className="inline-flex min-h-10 items-center gap-2 border border-white/10 bg-black/20 px-3">
@@ -301,7 +306,7 @@ export default function SiteFooter() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm leading-6 text-white/48 transition hover:text-red-100"
+                        className="text-sm leading-6 text-white/48 transition hover:text-[#FDE8E8]"
                       >
                         {link.label}
                       </a>
@@ -314,7 +319,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-4 pt-6 text-sm text-white/42 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2026 Ractysh Private Limited. All rights reserved.</p>
+          <p>&copy; 2025 RACTYSH Group. All rights reserved.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a href="#contact" className="transition hover:text-white">
               Contact
@@ -322,7 +327,10 @@ export default function SiteFooter() {
             <a href="#routes" className="transition hover:text-white">
               Routes
             </a>
-            <a href="mailto:desk@ractysh.com" className="transition hover:text-white">
+            <a href="tel:+918300660698" className="transition hover:text-white">
+              +91 83006 60698
+            </a>
+            <a href="mailto:ractyshassociates@gmail.com" className="transition hover:text-white">
               Email desk
             </a>
           </div>

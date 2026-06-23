@@ -27,7 +27,7 @@ const defaultWebsiteUrl = "http://localhost:3000";
 const fontSans = "Arial, Helvetica, sans-serif";
 const fontSerif = "Georgia, 'Times New Roman', serif";
 
-const welcomeNewsletterSubject = "Welcome to the Ractysh Network";
+const welcomeNewsletterSubject = "Welcome to the RACTYSH ASSOCIATES PVT LTD Network";
 
 const ecosystemCards = [
   { title: "Architecture", icon: "⌖" },
@@ -93,7 +93,7 @@ const styles = {
   } satisfies CSSProperties,
   logoMark: {
     margin: "0",
-    color: "#8F1118",
+    color: "#C94A4A",
     fontFamily: fontSerif,
     fontSize: "48px",
     fontWeight: 700,
@@ -204,7 +204,7 @@ const styles = {
   } satisfies CSSProperties,
   cardIcon: {
     margin: "0 0 16px",
-    color: "#9A0F17",
+    color: "#C94A4A",
     fontFamily: "Georgia, 'Times New Roman', serif",
     fontSize: "34px",
     lineHeight: "36px",
@@ -275,8 +275,8 @@ const styles = {
     minWidth: "268px",
     padding: "18px 34px",
     borderRadius: "10px",
-    backgroundColor: "#A3121A",
-    boxShadow: "0 16px 34px rgba(163, 18, 26, 0.28)",
+    backgroundColor: "#E85D5D",
+    boxShadow: "0 16px 34px rgba(232, 93, 93, 0.2)",
     color: "#FFFFFF",
     fontFamily: fontSans,
     fontSize: "14px",
@@ -420,14 +420,14 @@ function WelcomeNewsletterEmail({
           `}
         </style>
       </Head>
-      <Preview>{`Welcome to the Ractysh Network${previewName}.`}</Preview>
+      <Preview>{`Welcome to the RACTYSH ASSOCIATES PVT LTD Network${previewName}.`}</Preview>
       <Body style={styles.body}>
         <Section style={styles.outer}>
           <Container className="ractysh-container" style={styles.container}>
             <Section className="mobile-top" style={styles.topBar}>
               <Row>
                 <Column>
-                  <Text style={styles.topText}>Welcome to the Ractysh Network</Text>
+                  <Text style={styles.topText}>Welcome to the RACTYSH ASSOCIATES PVT LTD Network</Text>
                 </Column>
                 <Column align="right">
                   <Link href={normalizedWebsiteUrl} style={styles.topLink}>
@@ -438,21 +438,21 @@ function WelcomeNewsletterEmail({
             </Section>
 
             <Section className="mobile-pad" style={styles.header}>
-              <Section aria-label="Ractysh Logo" style={styles.logoBlock}>
+              <Section aria-label="RACTYSH Logo" style={styles.logoBlock}>
                 <Text style={styles.logoMark}>R</Text>
                 <Text style={styles.wordmark}>RACTYSH</Text>
-                <Text style={styles.logoGroup}>GROUP</Text>
+                <Text style={styles.logoGroup}>ASSOCIATES PVT LTD</Text>
               </Section>
               <Text style={styles.eyebrow}>Enterprise Ecosystem</Text>
               <Heading className="mobile-hero-title" as="h1" style={styles.heroTitle}>
                 Welcome To
                 <br />
-                The Ractysh Network
+                The RACTYSH ASSOCIATES PVT LTD Network
               </Heading>
               <Hr style={styles.shortRule} />
               <Text className="mobile-subheading" style={styles.subheading}>
                 You now have access to enterprise intelligence, ecosystem updates and strategic insights across the
-                Ractysh Group.
+                RACTYSH Group.
               </Text>
             </Section>
 
@@ -494,8 +494,8 @@ function WelcomeNewsletterEmail({
                 </Column>
                 <Column className="executive-copy-column" style={styles.executiveCopyColumn}>
                   <Text style={styles.paragraph}>
-                    The Ractysh ecosystem is built to unite architecture, construction, real estate, trade and private
-                    trade operations into one intelligent enterprise network.
+                  The RACTYSH ASSOCIATES PVT LTD ecosystem is built to unite architecture, construction, real estate, trade and private
+                  trade operations into one intelligent enterprise network.
                   </Text>
                   <Text style={{ ...styles.paragraph, marginBottom: 0 }}>
                     You will periodically receive curated updates, project intelligence, strategic developments and
@@ -507,19 +507,19 @@ function WelcomeNewsletterEmail({
 
             <Section className="mobile-pad" style={styles.ctaSection}>
               <Button className="mobile-cta" href={normalizedWebsiteUrl} style={styles.cta}>
-                Explore Ractysh&nbsp;&nbsp;→
+                Explore RACTYSH ASSOCIATES PVT LTD&nbsp;&nbsp;→
               </Button>
             </Section>
 
             <Section className="mobile-pad" style={styles.footer}>
               <Hr style={styles.footerRule} />
-              <Text style={styles.footerName}>Ractysh Group</Text>
+              <Text style={styles.footerName}>RACTYSH Group</Text>
               <Text style={styles.footerDivisions}>
                 Architecture <span style={styles.goldDot}>•</span> Construction <span style={styles.goldDot}>•</span>{" "}
                 Real Estate <span style={styles.goldDot}>•</span> Import &amp; Export
               </Text>
               <Text style={styles.footerLocation}>Coimbatore <span style={styles.goldDot}>•</span> Palani <span style={styles.goldDot}>•</span> Dindigul</Text>
-              <Text style={styles.copyright}>© 2026 Ractysh Group. All rights reserved.</Text>
+              <Text style={styles.copyright}>© 2025 RACTYSH Group. All rights reserved.</Text>
               {unsubscribeUrl ? (
                 <Text style={styles.unsubscribe}>
                   Sent to {email || "your inbox"} ·{" "}
@@ -547,9 +547,9 @@ function renderWelcomeNewsletterText({
   return [
     greeting,
     "",
-    "Welcome to the Ractysh Network.",
+    "Welcome to the RACTYSH ASSOCIATES PVT LTD Network.",
     "",
-    "You now have access to enterprise intelligence, ecosystem updates and strategic insights across the Ractysh Group.",
+    "You now have access to enterprise intelligence, ecosystem updates and strategic insights across the RACTYSH Group.",
     "",
     "Our ecosystem:",
     "Architecture",
@@ -559,15 +559,15 @@ function renderWelcomeNewsletterText({
     "",
     "Connected To A Higher Standard Of Execution",
     "",
-    "The Ractysh ecosystem is built to unite architecture, construction, real estate and trade operations into one intelligent enterprise network.",
+    "The RACTYSH ASSOCIATES PVT LTD ecosystem is built to unite architecture, construction, real estate and trade operations into one intelligent enterprise network.",
     "You will periodically receive curated updates, project intelligence, strategic developments and ecosystem announcements.",
     "",
-    `Explore Ractysh: ${cleanUrl(websiteUrl)}`,
+    `Explore RACTYSH ASSOCIATES PVT LTD: ${cleanUrl(websiteUrl)}`,
     "",
-    "Ractysh Group",
+    "RACTYSH Group",
     "Architecture • Construction • Real Estate • Import & Export",
     "Coimbatore • Palani • Dindigul",
-    "© 2026 Ractysh Group. All rights reserved.",
+    "© 2025 RACTYSH Group. All rights reserved.",
     unsubscribeUrl ? `Unsubscribe (${email || "subscriber"}): ${unsubscribeUrl}` : ""
   ]
     .filter(Boolean)

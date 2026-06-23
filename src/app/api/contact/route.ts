@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
 
   const metadata = {
     sourcePage,
-    submittedFrom: "ractysh-otc-exchange",
+    submittedFrom: "ractysh-associates-otc",
     inquiryType: "OTC Contact Form",
     service,
     phone: phone || null,

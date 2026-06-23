@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 const defaultAdminEmail = "kalandars2004@gmsil.com";
-const defaultSender = "Ractysh OTC <onboarding@resend.dev>";
+const defaultSender = "RACTYSH ASSOCIATES PVT LTD <onboarding@resend.dev>";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export type OtcContactEmailInput = {
@@ -80,7 +80,7 @@ function dataRow(label: string, value: string | null | undefined) {
 function buildText(input: OtcContactEmailInput) {
   const servicesList = input.services?.length ? input.services.join(", ") : "Not specified";
 
-  return `New Ractysh OTC Contact Form Submission
+  return `New RACTYSH ASSOCIATES PVT LTD Contact Form Submission
 
 Submitted: ${formatSubmittedAt(input.createdAt)}
 Inquiry ID: ${input.inquiryId}
@@ -107,8 +107,8 @@ function buildHtml(input: OtcContactEmailInput) {
             <td align="center" style="padding:32px 18px;">
               <table role="presentation" width="680" cellpadding="0" cellspacing="0" style="width:680px;max-width:100%;border-collapse:separate;border-spacing:0;background:#f3f1ea;border:1px solid #d8d2c5;border-radius:24px;overflow:hidden;">
                 <tr>
-                  <td style="padding:32px;background:#1A0000;color:#ffffff;">
-                    <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B91C1C;">Ractysh OTC</p>
+                    <td style="padding:32px;background:#1A0505;color:#ffffff;">
+                    <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#E85D5D;">RACTYSH ASSOCIATES PVT LTD</p>
                     <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:34px;line-height:40px;color:#ffffff;">New Contact Submission</h1>
                     <p style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:rgba(255,255,255,0.68);">A mandate note was submitted through the OTC exchange landing page.</p>
                   </td>
@@ -152,7 +152,7 @@ export async function sendOtcContactAdminEmail(input: OtcContactEmailInput) {
     from: getSender(),
     to: getAdminEmail(),
     replyTo: input.email,
-    subject: `New Ractysh OTC contact - ${present(input.name)}`,
+    subject: `New RACTYSH ASSOCIATES PVT LTD contact - ${present(input.name)}`,
     text: buildText(input),
     html: buildHtml(input),
   });

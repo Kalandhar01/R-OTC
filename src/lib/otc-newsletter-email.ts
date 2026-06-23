@@ -3,7 +3,7 @@ import { renderWelcomeNewsletterEmail } from "@/emails/WelcomeNewsletterEmail";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const defaultLocalUrl = "http://localhost:3000";
-const defaultSender = "Ractysh Newsletter <newsletter@ractysh.com>";
+const defaultSender = "RACTYSH ASSOCIATES PVT LTD <newsletter@ractysh.com>";
 
 export type OtcNewsletterEmailResult = {
   sent: boolean;
