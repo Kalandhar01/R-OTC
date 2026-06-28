@@ -41,6 +41,7 @@ const footerColumns = [
       { label: "Terms & Conditions", href: "/terms-and-conditions" },
       { label: "Cookie Policy", href: "/cookie-policy" },
       { label: "Disclaimer", href: "/disclaimer" },
+      { label: "Tracxn Verified", href: "https://tracxn.com/d/legal-entities/india/ractysh-associates-private-limited/__p99IUPI1mkkrGOTNY_3iSI7_AizQOmG3fpssn2JRR1k" },
     ],
   },
   {
@@ -336,6 +337,19 @@ export default function SiteFooter() {
               Email desk
             </a>
           </div>
+        </div>
+
+        <div className="mt-6 border-t border-white/5 pt-5 text-center text-[11px] text-white/30 sm:flex sm:items-center sm:justify-between sm:text-left">
+          <p>CIN: U66190TZ2025PTC036206 | ROC: Coimbatore</p>
+          <a
+            href="https://tracxn.com/d/legal-entities/india/ractysh-associates-private-limited/__p99IUPI1mkkrGOTNY_3iSI7_AizQOmG3fpssn2JRR1k"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-1.5 text-[#F5C2C2]/50 transition hover:text-[#F5C2C2] sm:mt-0"
+          >
+            <ShieldCheck className="size-3" />
+            <span>Tracxn Verified Company</span>
+          </a>
         </div>
       </div>
     </footer>
