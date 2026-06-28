@@ -37,8 +37,10 @@ const footerColumns = [
       { label: "AML Framework", href: "#aml-compliance" },
       { label: "FIU Compliance Focus", href: "#fiu-registration" },
       { label: "GST Compliant Operations", href: "#gst-compliance" },
-      { label: "Privacy Policy", href: "#contact" },
-      { label: "Terms & Conditions", href: "#contact" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms-and-conditions" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
+      { label: "Disclaimer", href: "/disclaimer" },
     ],
   },
   {
