@@ -339,17 +339,39 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-white/5 pt-5 text-center text-[11px] text-white/30 sm:flex sm:items-center sm:justify-between sm:text-left">
-          <p>CIN: U66190TZ2025PTC036206 | ROC: Coimbatore</p>
-          <a
-            href="https://tracxn.com/d/legal-entities/india/ractysh-associates-private-limited/__p99IUPI1mkkrGOTNY_3iSI7_AizQOmG3fpssn2JRR1k"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center gap-1.5 text-[#F5C2C2]/50 transition hover:text-[#F5C2C2] sm:mt-0"
-          >
-            <ShieldCheck className="size-3" />
-            <span>Tracxn Verified Company</span>
-          </a>
+        <div className="mt-8 border-t border-white/5 pt-6">
+          <div className="grid gap-6 text-[11px] text-white/30 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/20">Company Status</p>
+              <p className="text-white/50">Active &bull; Incorporated Sep 26, 2025</p>
+            </div>
+            <div>
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/20">CIN &amp; ROC</p>
+              <p className="text-white/50">U66190TZ2025PTC036206 &bull; ROC Coimbatore</p>
+            </div>
+            <div>
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/20">Capital</p>
+              <p className="text-white/50">Authorised: ₹1L &bull; Paid-up: ₹20K</p>
+            </div>
+            <div>
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/20">Directors</p>
+              <p className="text-white/50">Beermohamed Jamaldheen &bull; Shaiknoordeen Fawaz</p>
+            </div>
+          </div>
+          <div className="mt-4 border-t border-white/5 pt-4 text-center text-[11px] text-white/30 sm:flex sm:items-center sm:justify-between sm:text-left">
+            <p className="leading-relaxed">
+              Registered Address: D.NO:129A, Maruthuvanagar, Palani, Dindigul, Tamil Nadu, India &mdash; 624601
+            </p>
+            <a
+              href="https://tracxn.com/d/legal-entities/india/ractysh-associates-private-limited/__p99IUPI1mkkrGOTNY_3iSI7_AizQOmG3fpssn2JRR1k"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 text-[#F5C2C2]/50 transition hover:text-[#F5C2C2] sm:mt-0"
+            >
+              <ShieldCheck className="size-3" />
+              <span>Tracxn Verified Company</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
