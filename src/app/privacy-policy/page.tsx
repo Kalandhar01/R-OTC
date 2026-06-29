@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NavbarDemo from "@/components/navbar-menu-demo";
 import SiteFooter from "@/components/site-footer";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Ractysh Associates Pvt Ltd",
-  description:
-    "Privacy Policy of Ractysh Associates Pvt Ltd. Learn how we collect, use, and protect your personal data.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/privacy-policy"]);
 
 const sections = [
   {

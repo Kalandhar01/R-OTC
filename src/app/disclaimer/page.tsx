@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NavbarDemo from "@/components/navbar-menu-demo";
 import SiteFooter from "@/components/site-footer";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Disclaimer | Ractysh Associates Pvt Ltd",
-  description:
-    "Disclaimer of Ractysh Associates Pvt Ltd. Important legal notices regarding the use of our website and services.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/disclaimer"]);
 
 const sections = [
   {

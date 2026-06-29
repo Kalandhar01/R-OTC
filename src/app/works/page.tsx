@@ -2,12 +2,29 @@ import type { Metadata } from "next"
 import NavbarDemo from "@/components/navbar-menu-demo"
 import SiteFooter from "@/components/site-footer"
 import { getProjectsByDivision } from "@/lib/our-works"
+import { SITE_URL, COMPANY_NAME } from "@/lib/seo"
 
 export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
-  title: "Our Works | RACTYSH OTC Exchange Desk",
-  description: "Explore our OTC exchange desk portfolio and completed transactions.",
+  title: "Our Works | Ractysh Associates Pvt Ltd",
+  description: "Explore the portfolio of Ractysh Associates Private Limited showcasing OTC transactions, business consulting engagements, and completed mandates.",
+  alternates: {
+    canonical: `${SITE_URL}/works`,
+  },
+  openGraph: {
+    title: "Our Works — Portfolio | Ractysh Associates Pvt Ltd",
+    description: "Explore the portfolio of Ractysh Associates Private Limited showcasing OTC transactions, business consulting engagements, and completed mandates.",
+    url: `${SITE_URL}/works`,
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: COMPANY_NAME,
+      },
+    ],
+  },
 }
 
 interface ProjectItem {

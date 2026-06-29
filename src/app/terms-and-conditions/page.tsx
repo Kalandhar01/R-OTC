@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NavbarDemo from "@/components/navbar-menu-demo";
 import SiteFooter from "@/components/site-footer";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Ractysh Associates Pvt Ltd",
-  description:
-    "Terms and Conditions of Ractysh Associates Pvt Ltd. Please read these terms carefully before using our website or services.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/terms-and-conditions"]);
 
 const sections = [
   {

@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NavbarDemo from "@/components/navbar-menu-demo";
 import SiteFooter from "@/components/site-footer";
+import { buildMetadata, pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy | Ractysh Associates Pvt Ltd",
-  description:
-    "Cookie Policy of Ractysh Associates Pvt Ltd. Learn about how we use cookies and similar tracking technologies.",
-};
+export const metadata: Metadata = buildMetadata(pageSeo["/cookie-policy"]);
 
 const sections = [
   {

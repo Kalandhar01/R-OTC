@@ -4,21 +4,36 @@ import type { Metadata } from "next"
 import { ArrowLeft, MapPin } from "lucide-react"
 import NavbarDemo from "@/components/navbar-menu-demo"
 import SiteFooter from "@/components/site-footer"
+import JsonLd from "@/components/JsonLd"
 import { getProjectBySlug, getProjectsByDivision } from "@/lib/our-works"
+import { SITE_URL, COMPANY_NAME } from "@/lib/seo"
 
 export const dynamic = "force-dynamic"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const project = await getProjectBySlug(slug)
-  if (!project) return { title: "Project Not Found | RACTYSH OTC Exchange Desk" }
+  if (!project) return { title: "Project Not Found | Ractysh Associates Pvt Ltd" }
   return {
-    title: `${project.title} | RACTYSH OTC Exchange Desk`,
+    title: `${project.title} | Ractysh Associates Pvt Ltd`,
     description: project.shortDescription || project.description,
+    alternates: {
+      canonical: `${SITE_URL}/works/${slug}`,
+    },
     openGraph: {
-      title: `${project.title} | RACTYSH OTC Exchange Desk`,
+      title: `${project.title} — ${COMPANY_NAME}`,
       description: project.shortDescription || project.description,
-      images: project.coverImage ? [{ url: project.coverImage }] : [],
+      url: `${SITE_URL}/works/${slug}`,
+      type: "article",
+      images: project.coverImage
+        ? [{ url: project.coverImage, width: 1200, height: 630, alt: project.title }]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — ${COMPANY_NAME}`,
+      description: project.shortDescription || project.description,
+      images: project.coverImage ? [project.coverImage] : [],
     },
   }
 }
@@ -33,6 +48,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <main className="min-h-screen bg-white text-slate-950">
+      <JsonLd
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: project.title,
+          description: project.shortDescription || project.description,
+          image: project.coverImage,
+          author: { "@type": "Organization", name: COMPANY_NAME },
+          url: `${SITE_URL}/works/${slug}`,
+        }}
+      />
       <NavbarDemo />
       <section className="px-5 pb-20 pt-32 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
