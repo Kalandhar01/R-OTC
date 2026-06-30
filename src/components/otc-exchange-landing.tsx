@@ -442,14 +442,14 @@ export function OtcExchangeLanding() {
       >
         <div className="max-w-3xl">
           <h1
-            className="relative min-h-[16.75rem] max-w-4xl text-5xl font-semibold leading-[0.95] text-white sm:min-h-[14.25rem] sm:text-6xl lg:min-h-[17.25rem] lg:text-7xl"
+            className="relative min-h-[18rem] max-w-4xl text-[2.5rem] font-semibold leading-[1.05] text-white sm:min-h-[14.25rem] sm:text-6xl lg:min-h-[17.25rem] lg:text-7xl"
             aria-label={activeHeadline}
           >
             <EncryptedText
               key={`${activeHeadlineIndex}-${headlinePhase}`}
               text={activeHeadline}
               direction={headlinePhase}
-              className="absolute left-0 top-0 inline-block max-w-[11ch] whitespace-normal break-words font-mono tracking-normal sm:max-w-[12ch] lg:max-w-[13ch]"
+              className="absolute left-0 top-0 inline-block max-w-[16ch] whitespace-normal break-words font-mono tracking-normal sm:max-w-[12ch] lg:max-w-[13ch]"
               encryptedClassName="text-[#F5C2C2]/55"
               revealedClassName="text-white"
               revealDelayMs={
@@ -466,7 +466,7 @@ export function OtcExchangeLanding() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.64, duration: 0.62, ease: "easeOut" }}
-            className="mt-9 max-w-2xl text-lg leading-8 text-white/72 sm:mt-7 sm:text-xl"
+            className="mt-6 max-w-2xl text-base leading-7 text-white/72 sm:mt-7 sm:text-lg sm:leading-8 lg:text-xl"
           >
             A professional intermediary business service platform connecting
             clients with verified partners, strategic opportunities, and
