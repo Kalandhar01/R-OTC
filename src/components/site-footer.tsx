@@ -321,7 +321,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-4 pt-6 text-sm text-white/42 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2025 RACTYSH GROUP. All Rights Reserved.</p>
+          <p>&copy; 2025 <Link href="https://www.ractysh.com/" className="hover:text-white transition-colors">RACTYSH GROUP</Link>. All Rights Reserved.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <a href="#contact" className="transition hover:text-white">
               Contact
