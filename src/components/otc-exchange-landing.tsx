@@ -15,7 +15,6 @@ import {
   Camera,
   Check,
   ChevronDown,
-  CircleDollarSign,
   ClipboardCheck,
   FileCheck2,
   Flashlight,
@@ -23,27 +22,28 @@ import {
   Handshake,
   Landmark,
   LockKeyhole,
+  Network,
   ReceiptText,
   Scale,
   ShieldCheck,
   Timer,
   UserCheck,
-  Wallet,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "motion/react";
 
 const trustPoints = [
-  "Verified mandate desk",
-  "Quote discipline",
-  "Settlement proof",
+  "Verified service desk",
+  "Process discipline",
+  "Documented outcomes",
 ];
 
 const heroHeadlineSentences = [
-  "RACTYSH ASSOCIATES PVT LTD for private blocks.",
-  "Verified OTC mandates close clean deals.",
-  "Private OTC routes protect clean blocks.",
-  "Serious OTC desks route verified blocks.",
+  "RACTYSH ASSOCIATES PVT LTD for business services.",
+  "Your intermediary platform for growth.",
+  "Connecting businesses with the right opportunities.",
+  "Professional services, simplified and reliable.",
 ];
 
 const HERO_HEADLINE_REVEAL_DELAY_MS = 42;
@@ -52,9 +52,9 @@ const HERO_HEADLINE_HOLD_MS = 10000;
 const HERO_HEADLINE_SWITCH_PAUSE_MS = 180;
 
 const heroStats: Array<[value: string, label: string]> = [
-  ["$24.8M", "Live quote lane"],
-  ["18m", "Controlled lock"],
-  ["03/04", "Execution stage"],
+  ["100+", "Business Partners"],
+  ["15+", "Service Verticals"],
+  ["98%", "Client Satisfaction"],
 ];
 
 const phoneNotifications = [
@@ -63,92 +63,92 @@ const phoneNotifications = [
     icon: "R",
     time: "now",
     title: "Who We Are",
-    body: "Private OTC digital asset desk for verified clients — built on discretion, compliance, and clean execution.",
+    body: "A professional intermediary business service platform connecting clients with verified service providers and strategic opportunities.",
   },
   {
     app: "Mission",
     icon: "M",
     time: "",
     title: "Our Purpose",
-    body: "Enable secure, transparent digital asset exchange for eligible private and institutional participants.",
+    body: "Simplify complex business processes by providing reliable intermediary services, corporate consulting, and professional coordination.",
   },
   {
     app: "Values",
     icon: "V",
     time: "",
     title: "How We Operate",
-    body: "KYC-led onboarding, private quote support, counterparty verification, and documented settlement with professional standards.",
+    body: "Integrity-led service delivery, verified partner networks, transparent communication, and professional standards across every engagement.",
   },
 ];
 
 const projectFaqs = [
   {
-    question: "What type of OTC projects can move through the desk?",
+    question: "What types of business intermediary services does RACTYSH ASSOCIATES offer?",
     answer:
-      "We support private block trades, treasury conversions, crypto-to-fiat routes, stablecoin settlement, and verified counterparty mandates where size, privacy, timing, and clean reporting matter.",
+      "We offer a comprehensive range of intermediary business services including corporate consulting, trade assistance, business networking, vendor coordination, investment facilitation, documentation support, client representation, business partnerships, and general corporate support services.",
   },
   {
-    question: "How does a project get accepted before pricing starts?",
+    question: "How does RACTYSH ASSOCIATES connect businesses with opportunities?",
     answer:
-      "The desk first checks the entity profile, mandate authority, source-of-funds context, beneficiary details, route expectations, and trade intent. Once the project is clear, it can move into quote shaping.",
+      "Our platform maintains a verified network of partners, service providers, and business contacts across multiple industries. We assess client requirements, identify suitable matches, facilitate introductions, and support the relationship through to successful collaboration.",
   },
   {
-    question: "Can clients keep project details confidential?",
+    question: "Can clients keep their business requirements confidential?",
     answer:
-      "Yes. Project information is handled on a need-to-know basis, with private routing, limited desk visibility, and deal notes structured so operators can act without exposing unnecessary client context.",
+      "Yes. All client information, business requirements, and engagement details are handled with strict confidentiality. Information is shared only on a need-to-know basis and with explicit client consent.",
   },
   {
-    question: "What happens after a quote is approved?",
+    question: "What happens after a service requirement is submitted?",
     answer:
-      "The project moves into controlled execution: price lock, expiry, wallet or bank confirmation, route approval, operator responsibility, and settlement timing are aligned before funds or assets move.",
+      "Our team reviews the requirement, identifies suitable partners or service providers from our verified network, presents options to the client, facilitates discussions, and supports the engagement through documentation and follow-through.",
   },
   {
-    question: "Do you provide records after settlement?",
+    question: "Do you provide documentation and records for each engagement?",
     answer:
-      "Every completed project can include transfer proof, settlement timestamps, client-facing receipts, desk notes, and a final archive so the client has a clean record without chasing scattered messages.",
+      "Every engagement includes professional documentation including service agreements, progress records, transaction summaries, and closure reports so clients have a complete record of the engagement.",
   },
 ];
 
 const trustComplianceCards = [
   {
-    title: "AML Compliance",
+    title: "Verified Partner Network",
     description:
-      "Our operations follow AML guidelines with thorough verification protocols, transaction monitoring, and record keeping that meet regulatory expectations for private OTC desks.",
+      "Our network of business partners and service providers is verified through a structured assessment process to ensure reliability, capability, and professional standards.",
     icon: ShieldCheck,
   },
   {
-    title: "FIU Focused Operations",
+    title: "Professional Service Standards",
     description:
-      "Structured desk procedures aligned with FIU reporting standards, ensuring transparent transaction documentation and compliance coordination for eligible mandates.",
+      "Every engagement follows structured service protocols with clear communication, defined milestones, and professional documentation from initial consultation through completion.",
     icon: Landmark,
   },
   {
-    title: "GST Compliant Business",
+    title: "Transparent Business Practices",
     description:
-      "Fully GST-registered operations with proper invoicing and tax documentation for every mandate, providing clarity for corporate and institutional clients.",
+      "We maintain transparency in all engagements with clear service terms, open communication channels, and honest assessment of capabilities and outcomes.",
     icon: ReceiptText,
   },
   {
-    title: "Secure Transactions",
+    title: "Confidential & Secure",
     description:
-      "End-to-end encrypted communication, multi-signature wallet coordination, and protected settlement routing to maintain confidentiality and transaction integrity.",
+      "Client information, business strategies, and engagement details are protected through secure communication channels and strict confidentiality protocols.",
     icon: LockKeyhole,
   },
   {
-    title: "Dedicated OTC Support",
+    title: "Dedicated Service Coordination",
     description:
-      "Each mandate is assigned a dedicated desk coordinator who manages communication, documentation, and settlement steps from quote to completion.",
+      "Each engagement is assigned a dedicated coordinator who manages communication, documentation, and service delivery from start to finish.",
     icon: Handshake,
   },
   {
-    title: "Institutional Grade Service",
+    title: "Professional & Ethical Approach",
     description:
-      "Service standards designed for corporate treasury, family office, and qualified institutional clients who require professional coordination and settlement assurance.",
+      "Our operations are built on integrity, professional ethics, and a commitment to serving the best interests of our clients in every engagement.",
     icon: Building2,
   },
 ];
 
-const otcServices: Array<{
+const intermediaryServices: Array<{
   title: string;
   description: string;
   benefits: string[];
@@ -157,162 +157,188 @@ const otcServices: Array<{
   image: string;
 }> = [
   {
-    title: "Cryptocurrency Exchange Services",
+    title: "Business Intermediary Services",
     description:
-      "Access a controlled OTC route for eligible crypto-to-crypto or crypto-to-fiat exchange requirements. Our desk coordinates asset details, counterparty readiness, quote timing, wallet instructions, and completion records so sizable transactions can progress with disciplined communication and professional oversight.",
+      "Comprehensive intermediary support connecting businesses with verified partners, service providers, and strategic opportunities. We assess requirements, identify suitable matches, and facilitate productive business relationships across industries and geographies.",
     benefits: [
-      "Private quote coordination",
-      "Multi-asset transaction support",
-      "Structured settlement records",
+      "Requirement assessment & matching",
+      "Verified partner introductions",
+      "End-to-end facilitation support",
     ],
-    cta: "Request exchange consultation",
-    icon: CircleDollarSign,
+    cta: "Explore intermediary services",
+    icon: Handshake,
     image: "/images/otc/crypto-exchange.webp",
   },
   {
-    title: "USDT Exchange Services",
+    title: "Corporate Consulting",
     description:
-      "Convert or settle USDT transactions through a desk process designed for verified clients, clear wallet controls, and documented execution. We support treasury-style stablecoin movement with attention to network selection, settlement windows, and transparent transaction confirmation.",
+      "Strategic corporate consulting services including business planning, market entry strategy, operational improvement, and organizational development. Our consultants bring practical experience across multiple business domains.",
     benefits: [
-      "Stablecoin route planning",
-      "Network and wallet checks",
-      "Confirmation-led settlement",
+      "Business strategy & planning",
+      "Market entry support",
+      "Operational improvement",
     ],
-    cta: "Discuss USDT route",
-    icon: Wallet,
-    image: "/images/otc/stablecoin.webp",
-  },
-  {
-    title: "Institutional OTC Trading Support",
-    description:
-      "Coordinate larger block requirements with dedicated desk assistance, structured quote review, and discreet counterparty communication. The service is built for corporates, family offices, and qualified participants who need execution support without public order book exposure.",
-    benefits: [
-      "Block trade coordination",
-      "Dedicated account support",
-      "Reduced market visibility",
-    ],
-    cta: "Speak with OTC desk",
-    icon: Landmark,
+    cta: "Discuss consulting needs",
+    icon: Building2,
     image: "/images/otc/institutional.webp",
   },
   {
-    title: "KYC & Client Verification Services",
+    title: "Trade Assistance",
     description:
-      "Begin with identity, entity, authority, and source-context checks appropriate to the proposed transaction. Our onboarding process helps ensure participants are understood before pricing or settlement routing begins, supporting smoother communication and a stronger compliance posture.",
+      "Professional trade assistance services including market research, partner identification, trade documentation support, and cross-border coordination. We help businesses navigate complex trade requirements efficiently.",
     benefits: [
-      "Verified onboarding",
-      "Authority and entity review",
-      "Source-context documentation",
+      "Market research & analysis",
+      "Trade partner identification",
+      "Documentation coordination",
     ],
-    cta: "Start verification",
-    icon: UserCheck,
-    image: "/images/otc/kyc-verification.webp",
-  },
-  {
-    title: "Secure Transaction Processing",
-    description:
-      "Move from quote approval to settlement with controlled instructions, wallet or beneficiary validation, and confirmation tracking. We prioritize secure fund handling practices, operational clarity, and documented transaction milestones while avoiding unnecessary exposure of sensitive client details.",
-    benefits: [
-      "Controlled payment instructions",
-      "Wallet and beneficiary validation",
-      "Transaction status tracking",
-    ],
-    cta: "Plan secure settlement",
-    icon: ShieldCheck,
-    image: "/images/otc/security-processing.webp",
-  },
-  {
-    title: "Compliance & Documentation Support",
-    description:
-      "Receive organized support for transaction summaries, client records, settlement references, and supporting documentation. Our team helps eligible clients maintain clearer internal files and compliance-ready narratives without representing outcomes as legal, tax, or investment advice.",
-    benefits: [
-      "Documentation packages",
-      "Transaction summary support",
-      "Audit-friendly record structure",
-    ],
-    cta: "Prepare documentation",
-    icon: FileCheck2,
-    image: "/images/otc/compliance.webp",
-  },
-  {
-    title: "Corporate Digital Asset Solutions",
-    description:
-      "Support corporate treasury conversions, operational stablecoin use cases, and digital asset settlement needs through a structured OTC desk. We help companies frame transaction purpose, risk controls, internal approvals, and execution steps before any exchange activity proceeds.",
-    benefits: [
-      "Treasury conversion planning",
-      "Corporate approval alignment",
-      "Digital asset workflow support",
-    ],
-    cta: "Review corporate needs",
-    icon: Building2,
-    image: "/images/otc/corporate.webp",
-  },
-  {
-    title: "Cross-Border Settlement Assistance",
-    description:
-      "Coordinate digital asset settlement conversations across approved jurisdictions, counterparties, and banking or wallet preferences. The desk focuses on route clarity, verification, timing, and documentation so international transaction requirements are approached professionally and with compliance awareness.",
-    benefits: [
-      "Global route coordination",
-      "Settlement timing alignment",
-      "Cross-border documentation support",
-    ],
-    cta: "Map settlement route",
+    cta: "Request trade assistance",
     icon: Globe2,
     image: "/images/otc/cross-border.webp",
   },
+  {
+    title: "Business Networking",
+    description:
+      "Structured business networking services connecting entrepreneurs, professionals, and organizations with relevant contacts, industry peers, and potential collaborators through curated introductions and events.",
+    benefits: [
+      "Curated introductions",
+      "Industry peer connections",
+      "Networking event access",
+    ],
+    cta: "Expand your network",
+    icon: Users,
+    image: "/images/otc/corporate.webp",
+  },
+  {
+    title: "Vendor Coordination",
+    description:
+      "End-to-end vendor coordination services including vendor identification, capability assessment, contract facilitation, and performance monitoring. We help businesses build reliable vendor relationships.",
+    benefits: [
+      "Vendor identification & vetting",
+      "Contract facilitation",
+      "Performance monitoring",
+    ],
+    cta: "Coordinate vendors",
+    icon: ClipboardCheck,
+    image: "/images/otc/kyc-verification.webp",
+  },
+  {
+    title: "Investment Facilitation",
+    description:
+      "Investment facilitation services connecting investors with verified opportunities across real estate, infrastructure, business ventures, and financial instruments. We support due diligence, documentation, and transaction coordination.",
+    benefits: [
+      "Opportunity identification",
+      "Due diligence support",
+      "Transaction coordination",
+    ],
+    cta: "Explore investment options",
+    icon: Landmark,
+    image: "/images/otc/security-processing.webp",
+  },
+  {
+    title: "Documentation Support",
+    description:
+      "Comprehensive documentation support including business proposals, service agreements, compliance documents, and project reports. Our team ensures professional, accurate, and timely documentation.",
+    benefits: [
+      "Business proposals & agreements",
+      "Compliance documentation",
+      "Project reporting",
+    ],
+    cta: "Request documentation help",
+    icon: FileCheck2,
+    image: "/images/otc/stablecoin.webp",
+  },
+  {
+    title: "Client Representation",
+    description:
+      "Professional client representation services for meetings, negotiations, and business discussions. Our representatives act in your best interest with clear authority, preparation, and professional conduct.",
+    benefits: [
+      "Meeting representation",
+      "Negotiation support",
+      "Professional advocacy",
+    ],
+    cta: "Arrange representation",
+    icon: UserCheck,
+    image: "/images/otc/compliance.webp",
+  },
+  {
+    title: "Business Partnerships",
+    description:
+      "Strategic business partnership facilitation including partner search, compatibility assessment, joint venture structuring, and partnership agreement support. We help build lasting and productive business relationships.",
+    benefits: [
+      "Partner search & assessment",
+      "Joint venture structuring",
+      "Agreement facilitation",
+    ],
+    cta: "Find business partners",
+    icon: Network,
+    image: "/images/otc/institutional.webp",
+  },
+  {
+    title: "Corporate Support Services",
+    description:
+      "A suite of corporate support services including administrative assistance, compliance coordination, regulatory guidance, and operational support to help businesses run smoothly and efficiently.",
+    benefits: [
+      "Administrative assistance",
+      "Compliance coordination",
+      "Operational support",
+    ],
+    cta: "Explore support services",
+    icon: ShieldCheck,
+    image: "/images/otc/crypto-exchange.webp",
+  },
 ];
 
-const otcDeskAdvantages: Array<{
+const serviceAdvantages: Array<{
   title: string;
   description: string;
   icon: LucideIcon;
 }> = [
   {
-    title: "Secure Transactions",
+    title: "Reliable Service Delivery",
     description:
-      "Controlled instructions, wallet checks, and settlement visibility help reduce operational uncertainty.",
+      "Structured service delivery processes with clear milestones, regular updates, and professional follow-through on every engagement.",
     icon: ShieldCheck,
   },
   {
-    title: "Dedicated Account Assistance",
+    title: "Dedicated Account Support",
     description:
-      "Clients receive focused desk coordination from onboarding through transaction completion.",
+      "Clients receive focused coordination from a dedicated service manager from initial consultation through engagement completion.",
     icon: UserCheck,
   },
   {
-    title: "Fast Settlement Process",
+    title: "Timely Response",
     description:
-      "Time-sensitive transactions are handled with clear quote windows and practical route planning.",
+      "We prioritize prompt communication and timely responses to ensure your business requirements move forward without unnecessary delays.",
     icon: Timer,
   },
   {
-    title: "Privacy & Confidentiality",
+    title: "Confidentiality Assured",
     description:
-      "Sensitive client, counterparty, and transaction details are handled on a need-to-know basis.",
+      "All client information, business strategies, and engagement details are treated with strict confidentiality and professional discretion.",
     icon: LockKeyhole,
   },
   {
-    title: "Verified Client Onboarding",
+    title: "Verified Partner Ecosystem",
     description:
-      "Identity, entity, authority, and transaction context are reviewed before execution discussions progress.",
+      "Our network of partners and service providers is carefully vetted to ensure capability, reliability, and professional standards.",
     icon: ClipboardCheck,
   },
   {
-    title: "Regulatory-Conscious Operations",
+    title: "Ethical Business Conduct",
     description:
-      "Our desk is structured around KYC awareness, AML sensitivity, and professional documentation discipline.",
+      "Every engagement is guided by professional ethics, transparency, and a genuine commitment to client success.",
     icon: Scale,
   },
   {
-    title: "Trusted Industry Partnerships",
+    title: "Trusted Industry Connections",
     description:
-      "We coordinate with recognized compliance-focused partners and service providers where appropriate.",
+      "We leverage our established network of industry contacts, professional associations, and business relationships to serve our clients effectively.",
     icon: Handshake,
   },
   {
-    title: "Transparent Transaction Support",
+    title: "Clear Communication",
     description:
-      "Clients receive clear communication around status, requirements, confirmations, and records.",
+      "Clients receive clear, professional communication around service scope, progress, requirements, and outcomes at every stage.",
     icon: ReceiptText,
   },
 ];
@@ -341,15 +367,16 @@ function formatPhoneLockDate() {
   }).format(new Date());
 }
 
+function ScrollRevealSection({ children }: { children: ReactNode }) {
+  return <>{children}</>;
+}
+
 export function OtcExchangeLanding() {
   const [activeHeadlineIndex, setActiveHeadlineIndex] = useState(0);
   const [headlinePhase, setHeadlinePhase] = useState<"reveal" | "conceal">("reveal");
-  const [phoneStatusTime, setPhoneStatusTime] = useState(
-    initialPhoneStatusTime,
-  );
+  const [phoneStatusTime, setPhoneStatusTime] = useState(initialPhoneStatusTime);
   const [phoneLockDate, setPhoneLockDate] = useState(initialPhoneLockDate);
-  const activeHeadline =
-    heroHeadlineSentences[activeHeadlineIndex] ?? heroHeadlineSentences[0];
+  const activeHeadline = heroHeadlineSentences[activeHeadlineIndex] ?? heroHeadlineSentences[0];
 
   useEffect(() => {
     const letterDelay =
@@ -367,7 +394,6 @@ export function OtcExchangeLanding() {
         setHeadlinePhase("conceal");
         return;
       }
-
       setActiveHeadlineIndex(
         (currentIndex) => (currentIndex + 1) % heroHeadlineSentences.length,
       );
@@ -382,17 +408,15 @@ export function OtcExchangeLanding() {
       setPhoneStatusTime(formatPhoneStatusTime());
       setPhoneLockDate(formatPhoneLockDate());
     };
-
     updatePhoneStatusTime();
     const clockInterval = window.setInterval(updatePhoneStatusTime, 15_000);
-
     return () => window.clearInterval(clockInterval);
   }, []);
 
   return (
     <main
       className="relative min-h-svh overflow-x-hidden bg-[#070b08] text-white"
-      aria-label="Animated OTC exchange landing background"
+      aria-label="RACTYSH ASSOCIATES landing background"
     >
       <div className="fixed inset-0 scale-110">
         <DeferredDither
@@ -444,13 +468,11 @@ export function OtcExchangeLanding() {
             transition={{ delay: 0.64, duration: 0.62, ease: "easeOut" }}
             className="mt-9 max-w-2xl text-lg leading-8 text-white/72 sm:mt-7 sm:text-xl"
           >
-            A private exchange desk for crypto, treasury, and institutional
-            mandates, built around verification, quote control, protected
-            routing, and final settlement records. Operating from Dubai, serving
-            clients across international markets. RACTYSH ASSOCIATES PVT LTD
-            acts as a trusted intermediary service provider, connecting
-            businesses, investors, and opportunities through reliable market
-            expertise and professional advisory support.
+            A professional intermediary business service platform connecting
+            clients with verified partners, strategic opportunities, and
+            corporate support services. RACTYSH ASSOCIATES PVT LTD acts as a
+            trusted intermediary, helping businesses find the right partners,
+            access the right services, and achieve their goals with confidence.
           </motion.p>
 
           <motion.div
@@ -463,14 +485,14 @@ export function OtcExchangeLanding() {
               href="#contact"
               className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#E85D5D] px-6 text-sm font-bold text-[#FFF0F0] shadow-[0_18px_50px_rgba(232,93,93,0.3)] transition hover:bg-[#F47575]"
             >
-              Start OTC mandate
+              Start a consultation
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
             <a
-              href="#desk"
+              href="#otc-services"
               className="inline-flex min-h-12 items-center rounded-full border border-white/16 bg-white/8 px-6 text-sm font-semibold text-white backdrop-blur-md transition hover:border-white/28 hover:bg-white/12"
             >
-              View exchange desk
+              View our services
             </a>
           </motion.div>
 
@@ -545,7 +567,7 @@ export function OtcExchangeLanding() {
                 <div
                   id="desk"
                   className="absolute inset-0 overflow-hidden px-3.5 pb-4 pt-4"
-                  aria-label="OTC private desk phone interface"
+                  aria-label="RACTYSH ASSOCIATES phone interface"
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_15%,rgba(255,255,255,0.22),transparent_18%),radial-gradient(circle_at_78%_24%,rgba(232,93,93,0.68),transparent_34%),linear-gradient(160deg,#0d1514_0%,#09251f_40%,#050403_100%)]" />
                   <div className="pointer-events-none absolute inset-0 bg-black/18 backdrop-blur-[0.5px]" />
@@ -678,19 +700,19 @@ export function OtcExchangeLanding() {
       </ScrollRevealSection>
       <ConnectedPageBackground>
         <ScrollRevealSection>
-          <OtcExchangeServicesSection />
+          <IntermediaryServicesSection />
         </ScrollRevealSection>
         <ScrollRevealSection>
-          <WhyChooseOtcDeskSection />
+          <WhyChooseUsSection />
         </ScrollRevealSection>
         <ScrollRevealSection>
-          <TrustCompliancePartnershipSection />
+          <ClientTestimonialsSection />
         </ScrollRevealSection>
         <ScrollRevealSection>
           <ConnectedContactSection />
         </ScrollRevealSection>
         <ScrollRevealSection>
-          <ProjectsFaqSection />
+          <ServicesFaqSection />
         </ScrollRevealSection>
       </ConnectedPageBackground>
       <ScrollRevealSection>
@@ -700,8 +722,7 @@ export function OtcExchangeLanding() {
   );
 }
 
-function OtcExchangeServicesSection() {
-
+function IntermediaryServicesSection() {
   return (
     <section
       id="otc-services"
@@ -713,21 +734,21 @@ function OtcExchangeServicesSection() {
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
-              OTC Exchange Services
+              Our Services
             </p>
             <h2 className="max-w-4xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">
-              Secure digital asset exchange support for verified private and institutional mandates.
+              Comprehensive intermediary business services for enterprises and professionals.
             </h2>
           </div>
           <div className="border-l border-white/12 pl-5 lg:pl-8">
             <p className="max-w-2xl text-base leading-8 text-white/58">
-              RACTYSH ASSOCIATES PVT LTD operates a secure OTC Digital Asset Exchange Division for
-              eligible clients seeking cryptocurrency and stablecoin transaction
-              support with verification, privacy, documentation, and disciplined
-              execution standards.
+              RACTYSH ASSOCIATES PVT LTD provides a full spectrum of intermediary
+              business services designed to connect clients with verified partners,
+              streamline complex processes, and deliver professional outcomes
+              across multiple service verticals.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              {["KYC-led onboarding", "Private quote support", "Documented settlement"].map(
+              {["Verified network", "Professional delivery", "End-to-end support"].map(
                 (indicator) => (
                   <span
                     key={indicator}
@@ -742,7 +763,7 @@ function OtcExchangeServicesSection() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {otcServices.map((service, index) => {
+          {intermediaryServices.map((service, index) => {
             const Icon = service.icon;
 
             return (
@@ -824,7 +845,7 @@ function OtcExchangeServicesSection() {
   );
 }
 
-function WhyChooseOtcDeskSection() {
+function WhyChooseUsSection() {
   return (
     <section
       id="why-otc-desk"
@@ -834,27 +855,27 @@ function WhyChooseOtcDeskSection() {
         <div className="grid gap-10 lg:grid-cols-[0.58fr_1fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#F5C2C2]">
-              Why choose our OTC desk
+              Why choose us
             </p>
             <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Institutional service standards for sensitive digital asset transactions.
+              Professional standards for every business engagement.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/58">
-              The desk is built for clients who value privacy, professional
-              coordination, transaction transparency, and compliance-aware
-              operations over public exchange exposure.
+              We are built for clients who value reliability, confidentiality,
+              professional coordination, and transparent processes over
+              unstructured approaches.
             </p>
             <a
               href="#contact"
               className="mt-8 inline-flex min-h-12 items-center gap-2 bg-[#E85D5D] px-5 text-sm font-bold text-[#FFF0F0] shadow-[0_18px_50px_rgba(232,93,93,0.22)] transition hover:bg-[#F47575]"
             >
-              Contact dedicated desk
+              Start a consultation
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
 
           <div className="grid border border-white/10 bg-black/24 backdrop-blur-xl sm:grid-cols-2">
-            {otcDeskAdvantages.map((item, index) => {
+            {serviceAdvantages.map((item, index) => {
               const Icon = item.icon;
 
               return (
@@ -894,12 +915,11 @@ function TrustComplianceSection() {
       <div className="relative mx-auto max-w-[92rem]">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
-            Why Trade With <span className="text-[#E85D5D]">RACTYSH ASSOCIATES PVT LTD</span> Exchange
+            Why Work With <span className="text-[#E85D5D]">RACTYSH ASSOCIATES PVT LTD</span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/58">
-            Every transaction on our desk is backed by compliance frameworks,
-            secure routing, and professional coordination built for private
-            digital asset mandates.
+            Every engagement is backed by professional standards, verified networks,
+            and a commitment to delivering reliable outcomes for our clients.
           </p>
         </div>
 
@@ -933,22 +953,22 @@ function TrustComplianceSection() {
   );
 }
 
-function TrustCompliancePartnershipSection() {
+function ClientTestimonialsSection() {
   const testimonials = [
     {
-      quote: "Working with RACTYSH ASSOCIATES PVT LTD's OTC desk gave us the privacy and execution confidence we needed for our corporate treasury conversion. The team was thorough, responsive, and the entire settlement was documented end-to-end.",
+      quote: "RACTYSH ASSOCIATES PVT LTD helped us find the right business partner for our expansion into South India. Their network and professional approach saved us months of searching and the partnership continues to deliver value.",
       name: "Rajesh Mehta",
-      role: "CFO, Meridian Ventures, Mumbai",
+      role: "Director, Meridian Enterprises, Mumbai",
     },
     {
-      quote: "As a family office managing digital assets, we needed a partner who understood compliance without unnecessary friction. RACTYSH ASSOCIATES PVT LTD delivered — clear process, professional communication, and seamless settlement.",
+      quote: "As a growing company, we needed reliable intermediary support for vendor coordination and documentation. RACTYSH ASSOCIATES delivered professional service with clear communication and timely results.",
       name: "Anita Krishnan",
-      role: "Director, Surya Capital, Bengaluru",
+      role: "CEO, Surya Solutions, Bengaluru",
     },
     {
-      quote: "The documentation and transaction records provided by RACTYSH ASSOCIATES PVT LTD made our audit process significantly smoother. Their compliance-aware approach gives us confidence in every trade.",
+      quote: "The corporate consulting support we received was exceptional. The team took time to understand our business, presented practical recommendations, and supported us through implementation.",
       name: "Vikram Patel",
-      role: "Finance Controller, Lotus Group, Ahmedabad",
+      role: "Founder, Lotus Group, Ahmedabad",
     },
   ];
 
@@ -965,8 +985,8 @@ function TrustCompliancePartnershipSection() {
             What Our Clients Say
           </p>
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
-            Trusted by verified <br />
-            <span className="text-[#F5C2C2]">private clients.</span>
+            Trusted by businesses <br />
+            <span className="text-[#F5C2C2]">across industries.</span>
           </h2>
         </div>
 
@@ -1035,11 +1055,7 @@ function ConnectedPageBackground({ children }: { children: ReactNode }) {
   );
 }
 
-function ScrollRevealSection({ children }: { children: ReactNode; amount?: number }) {
-  return <>{children}</>;
-}
-
-function ProjectsFaqSection() {
+function ServicesFaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -1052,15 +1068,14 @@ function ProjectsFaqSection() {
       <div className="relative mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#F5C2C2]">
-            Mandate questions
+            Frequently asked questions
           </p>
           <h2 className="max-w-2xl text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
-            What serious desks ask before a private OTC mandate moves.
+            Common questions about our intermediary business services.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/56">
-            Clear authority, route expectations, source context, and settlement
-            records keep high-value exchange work disciplined from the first
-            check to final reporting.
+            Clear answers about how we work, what we offer, and how we can
+            help your business grow through professional intermediary support.
           </p>
         </div>
 
