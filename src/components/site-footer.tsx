@@ -20,6 +20,7 @@ const footerColumns = [
       { label: "Desk flow", href: "#desk" },
       { label: "Capabilities", href: "#features" },
       { label: "Global routes", href: "#routes" },
+      { label: "RACTYSH Group", href: "https://www.ractysh.com/" },
     ],
   },
   {
