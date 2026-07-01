@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const defaultAdminEmail = "kalandars2004@gmsil.com";
+const defaultAdminEmail = "ractysh@gmail.com";
 const defaultSender = "RACTYSH ASSOCIATES PVT LTD <onboarding@resend.dev>";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
