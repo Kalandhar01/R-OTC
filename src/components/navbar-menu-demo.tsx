@@ -6,6 +6,7 @@ import { useState, useEffect, useRef, type MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { label: "Founder", href: "/founder" },
   { label: "Trust", href: "#otc-trust" },
   { label: "Services", href: "#otc-services" },
   { label: "Why Us", href: "#why-otc-desk" },
