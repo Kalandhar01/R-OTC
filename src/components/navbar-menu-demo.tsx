@@ -13,7 +13,7 @@ const navLinks = [
   { label: "FAQ", href: "#project-faq" },
 ];
 
-const ecosystemLink = { label: "RACTYSH", href: "https://www.ractysh.com/" };
+
 
 export default function NavbarDemo() {
   return <Navbar className="top-4 md:top-6" />;
@@ -41,7 +41,7 @@ function Navbar({ className }: { className?: string }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const mobileLinks = [...navLinks, { label: "Contact", href: "#contact" }, ecosystemLink];
+  const mobileLinks = [...navLinks, { label: "Contact", href: "#contact" }];
 
   const handleAnchorClick = (
     event: MouseEvent<HTMLAnchorElement>,
@@ -105,12 +105,7 @@ function Navbar({ className }: { className?: string }) {
               {link.label}
             </a>
           ))}
-          <a
-            href={ecosystemLink.href}
-            className="whitespace-nowrap px-1.5 py-1 text-xs font-medium text-[#C4A87C]/80 hover:text-[#C4A87C] transition-colors sm:text-sm"
-          >
-            {ecosystemLink.label}
-          </a>
+
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
